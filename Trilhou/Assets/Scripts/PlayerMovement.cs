@@ -27,11 +27,13 @@ public class PlayerMovement : MonoBehaviour
 
         transform.Translate(movement);
 
-        if (Input.GetKeyDown(KeyCode.A) || Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.S) || Input.GetKeyDown(KeyCode.D))
+        if (x > 0 || y > 0 || y < 0 || x < 0)
         {
             animator.SetBool("isWalking", true);
+            animator.SetBool("isIdling", false);
+
         }
-        else if(!Input.GetKeyDown(KeyCode.A) && !Input.GetKeyDown(KeyCode.W) && !Input.GetKeyDown(KeyCode.S) && !Input.GetKeyDown(KeyCode.D))
+        else if(x == 0 && y == 0)
         {           
             animator.SetBool("isWalking", false);
             animator.SetBool("isIdling", true);

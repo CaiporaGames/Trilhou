@@ -14,9 +14,10 @@ public class AntControllerPath : MonoBehaviour
     {
         this.points = points;
         nextPosition = points[oldIndice].gameObject.transform.position;
-        float angle = Mathf.Abs(Vector3.Angle(points[oldIndice].gameObject.transform.position, transform.position));
-        transform.GetChild(0).gameObject.transform.Rotate(new Vector3(0, 0, -angle));
+       // Vector2 direction = points[oldIndice].gameObject.transform.position - points[oldIndice - 1].gameObject.transform.position;
+       // float angle = Vector2.SignedAngle(direction, transform.GetChild(0).transform.position);
 
+       // transform.GetChild(0).transform.Rotate(new Vector3(0, 0, angle));
     }
 
     // Update is called once per frame
@@ -46,12 +47,12 @@ public class AntControllerPath : MonoBehaviour
         }
 
         oldIndice += 1;
-        nextPosition = points[oldIndice].gameObject.transform.position;
-        //Vector2 direction = points[oldIndice + 1].gameObject.transform.position - points[oldIndice].gameObject.transform.position;
-        // float angle = Vector2.SignedAngle(direction , points[oldIndice].gameObject.transform.position);      
-        //transform.GetChild(0).gameObject.transform.Rotate(new Vector3(0, 0, angle));
 
-        Quaternion toRotation = Quaternion.LookRotation(Vector3.forward, points[oldIndice].gameObject.transform.position);
-        transform.rotation = Quaternion.RotateTowards(transform.rotation, toRotation, antSpeed * Time.deltaTime);
+       
+        nextPosition = points[oldIndice].gameObject.transform.position;
+       // Vector2 direction = points[oldIndice].gameObject.transform.position - points[oldIndice - 1].gameObject.transform.position;
+       // float angle = Vector2.SignedAngle(direction , transform.GetChild(0).transform.position);
+
+       // transform.GetChild(0).transform.Rotate(new Vector3(0, 0, angle));
     }
 }
