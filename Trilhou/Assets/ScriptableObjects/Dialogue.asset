@@ -15,12 +15,12 @@ MonoBehaviour:
   setences:
   - setences: "Ol\xE1, eu sou a Maria Livr\xE3o."
     names: "Maria Livr\xE3o"
-  - setences: Eu sou uma menina aventureira que viaja pelo mundo fazendo descobertas.
-    names: "Maria Livr\xE3o"
   - setences: 'Agora mesmo vou entrar no meu celular para poder encontrar um novo
       desafio.
 
       Vem comigo!'
+    names: "Maria Livr\xE3o"
+  - setences: Eu sou uma menina aventureira que viaja pelo mundo fazendo descobertas.
     names: "Maria Livr\xE3o"
   - setences: "Ser\xE1 que se eu fizer uma pesquisa tamb\xE9m vou me sentir diferente?"
     names: "Maria Livr\xE3o"

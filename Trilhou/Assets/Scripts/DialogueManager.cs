@@ -9,7 +9,7 @@ public class DialogueManager : MonoBehaviour
     [SerializeField] TMP_Text dialogueText;
 
     [Tooltip("This holds the current sentence index on the sentences string list")]
-    int setenceIndex;
+    public int setenceIndex;
 
     private void Start()
     {
