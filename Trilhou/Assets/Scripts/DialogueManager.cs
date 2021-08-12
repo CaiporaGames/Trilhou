@@ -3,41 +3,46 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class DialogueManager : MonoBehaviour
+
+namespace Timoteo
 {
-    [SerializeField] SODialogue dialogues;
-    [SerializeField] TMP_Text dialogueText;
-
-    [Tooltip("This holds the current sentence index on the sentences string list")]
-    public int setenceIndex;
-
-    private void Start()
+    //COntrols the dialogue system. 
+    public class DialogueManager : MonoBehaviour
     {
-        DisplayDialogue(0);
-    }
+        [SerializeField] SODialogue dialogues;//This is a scriptable object holding the dialogue
+        [SerializeField] TMP_Text dialogueText;//this holds the text component 
 
-    void DisplayDialogue(int setenceIndex)
-    {
-        dialogueText.text = dialogues.setences[setenceIndex].setences;
-    
-    }
+        [Tooltip("This holds the current sentence index on the sentences string list")]
+        public int setenceIndex;
 
-    public void NextDialogue()
-    {
-        if (setenceIndex < dialogues.setences.Length - 1)
+        private void Start()
         {
-                setenceIndex++;
-            DisplayDialogue(setenceIndex);
+            DisplayDialogue(0);
         }
-    }
 
-    public void BackDialogue()
-    {
-        if (setenceIndex > 0)
+        void DisplayDialogue(int setenceIndex)//this passes the dialogue from the scriptable object dialogues to the text
         {
-            setenceIndex--;
-            DisplayDialogue(setenceIndex);
-        }       
-    }
+            dialogueText.text = dialogues.setences[setenceIndex].setences;
 
+        }
+
+        public void NextDialogue()//this controls the next dialogue when the player press the next button
+        {
+            if (setenceIndex < dialogues.setences.Length - 1)
+            {
+                setenceIndex++;
+                DisplayDialogue(setenceIndex);
+            }
+        }
+
+        public void BackDialogue()//this controls the last dialogue when the player press the back button
+        {
+            if (setenceIndex > 0)
+            {
+                setenceIndex--;
+                DisplayDialogue(setenceIndex);
+            }
+        }
+
+    }
 }

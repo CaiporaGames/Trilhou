@@ -2,57 +2,54 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AntControllerPath : MonoBehaviour
+namespace Timoteo
 {
-
-    List<GameObject> points;
-    [SerializeField] float antSpeed;
-    Vector3 nextPosition;
-    int oldIndice = 1;
-
-    public void GetPoints(List<GameObject> points)
+    
+    public class AntControllerPath : MonoBehaviour
     {
-        this.points = points;
-        nextPosition = points[oldIndice].gameObject.transform.position;
-       // Vector2 direction = points[oldIndice].gameObject.transform.position - points[oldIndice - 1].gameObject.transform.position;
-       // float angle = Vector2.SignedAngle(direction, transform.GetChild(0).transform.position);
 
-       // transform.GetChild(0).transform.Rotate(new Vector3(0, 0, angle));
-    }
+        List<GameObject> points;
+        [SerializeField] float antSpeed;
+        Vector3 nextPosition;
+        int oldIndice = 1;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (points == null)
+        public void GetPoints(List<GameObject> points)//allows us to take the 
         {
-            return;
-        }
-        if (Vector3.Distance(transform.position, nextPosition) <= 0.5f)
-        {
-
-            NextPosition();
+            this.points = points;
+            nextPosition = points[oldIndice].gameObject.transform.position;
+         
         }
 
-       transform.position = Vector2.MoveTowards( transform.position , nextPosition , antSpeed * Time.deltaTime);
-        
-    }
-
-    void NextPosition()
-    { 
-
-        if (oldIndice == points.Count-1)
+        // Update is called once per frame
+        void Update()
         {
-            Destroy(gameObject);
-            return;
+            if (points == null)
+            {
+                return;
+            }
+            if (Vector3.Distance(transform.position, nextPosition) <= 0.5f)
+            {
+
+                NextPosition();
+            }
+
+            transform.position = Vector2.MoveTowards(transform.position, nextPosition, antSpeed * Time.deltaTime);
+
         }
 
-        oldIndice += 1;
+        void NextPosition()//calculate what is the next point that the ants need to go
+        {
 
-       
-        nextPosition = points[oldIndice].gameObject.transform.position;
-       // Vector2 direction = points[oldIndice].gameObject.transform.position - points[oldIndice - 1].gameObject.transform.position;
-       // float angle = Vector2.SignedAngle(direction , transform.GetChild(0).transform.position);
+            if (oldIndice == points.Count - 1)
+            {
+                Destroy(gameObject);
+                return;
+            }
 
-       // transform.GetChild(0).transform.Rotate(new Vector3(0, 0, angle));
+            oldIndice += 1;
+
+
+            nextPosition = points[oldIndice].gameObject.transform.position;           
+        }
     }
 }
