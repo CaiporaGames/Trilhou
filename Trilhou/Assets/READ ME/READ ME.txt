@@ -1,22 +1,48 @@
-
-
-- O canva esta dividido em InsideTheGame: Todos as imagens que fazem parte do mundo, a cena do jogo. 
-       OutsideTheGame: Todas as imagens que somente aparecem no canvas e nao dentro do jogo.
-
-- BG: é uma abreviação para Background.
+                            ### Simbolos deste documento ###
 
 - ->: Este simbolo significa, próximo passo.
 
-- BTN: é uma abreviação para botão
 
-- Todos os scripts que começam com SO são scriptableObjects
+                            ### Abreviações ###
+
+- BG: é uma abreviação para Background.
+
+- BTN: é uma abreviação para botão.
+
+
+                            ### Convenções ###
+
+- Todos os scripts que começam com SO são scriptableObjects.
 
 - Todos os scripts que começam com I são interfaces.
 
-- Dialogue Manager: Contém o script que comanda todos os dialogos.
+- Colocar namespace nos scripts.
+
+- Nao usar variaveis ou funcoes publicas a menos que seja necessário. 
+
+- Para mostrar os nomes das variaveis na janela do inspetor basta usar o atributo [SerializeField] variavelType variavelName;
+
+- Usar Camel case para os nomes, ex: thisIsAnExample.
+
+- Usar nomes descritivos nos metodos e nos nomes dos scripts.
+
+- Faça commentarios nas variaveis e nos metodos.
+
+- Use tooltips para mostrar no inspector as descricoes das variaveis.
+
+
+
+                            ### Como usar Dialogue System ###
 
 - Adicionar novos dialogos: Entre na pasta scriptableObject -> Click em dialogue -> aperte o botao de +. Escreva o que desejar
        como dialogo. Coloque no nome do personagem na parte chamada names.
 
 - Alterar ordem das falas no dialogo: Entre na pasta scriptableObject -> Click em dialogue -> segure com o botão esquerdo do mouse,
        nos 2 tracos do lado esquerdo da sentenca e arraste para a posição desejada.
+
+                            ### Como usar o point bar ###
+
+- Chame a funcão AddToPointsBar() para adicionar pontos na barra de points.
+
+
+                            
