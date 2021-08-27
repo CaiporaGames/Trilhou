@@ -646,7 +646,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   target: {fileID: 2106866188}
   offset: {x: 0, y: 0}
-  speed: 4.5
+  speed: 6
   axis: 0
   lateUpdate: 1
 --- !u!1 &2106866185
@@ -708,7 +708,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 0}
+  m_Sprite: {fileID: 21300000, guid: 4095d1f11b65842428d20849edb85496, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -766,6 +766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: {x: 5, y: 5}
   jumpForce: 5
+  maxTimerBetweenIdleAnimation: 2
 --- !u!1 &2111340724
 GameObject:
   m_ObjectHideFlags: 0

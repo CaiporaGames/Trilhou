@@ -61,10 +61,6 @@ Methods:
 			if (controlType == ControlType.Continuous) {
 				ApplyVelocity ();
 			}
-			if (controlType == ControlType.Manual)
-			{
-				ApplyVelocity();
-			}
 		}
 
 		void ChangeVelocity(ref Vector2 velocity){
@@ -83,21 +79,19 @@ Methods:
 		}
 
 		private void ApplyVelocityTransform(){
-			//var velocity = Vector2.zero;
-			//ChangeVelocity (ref velocity);
+			var velocity = Vector2.zero;
+			ChangeVelocity (ref velocity);
 			transform.Translate (velocity * Time.deltaTime, local ? Space.Self : Space.World);
 		}
 
 		private void ApplyVelocityRigidbody(){
 			if (local) {
-				velocity = (Vector2)(Quaternion.Euler (0, 0, -rb.rotation) * rb.velocity);
-				//var velocity = (Vector2)(Quaternion.Euler (0, 0, -rb.rotation) * rb.velocity);
-				//ChangeVelocity (ref velocity);
+				var velocity = (Vector2)(Quaternion.Euler (0, 0, -rb.rotation) * rb.velocity);
+				ChangeVelocity (ref velocity);
 				rb.velocity = (Vector2)(Quaternion.Euler (0, 0, rb.rotation) * velocity);
 			} else {
-				velocity = rb.velocity;
-				//var velocity = rb.velocity;
-				//ChangeVelocity (ref velocity);
+				var velocity = rb.velocity;
+				ChangeVelocity (ref velocity);
 				rb.velocity = velocity;
 			}
 		}
