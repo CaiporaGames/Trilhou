@@ -53,6 +53,8 @@ namespace Timoteo
                 animator.SetBool("rightwalk", false);
 
                 animator.SetBool("idle1", false);
+                animator.SetBool("idle2", false);
+
 
             }
             else if (x < 0 && y < 0 || x > 0 && y < 0)
@@ -63,6 +65,8 @@ namespace Timoteo
                 animator.SetBool("rightwalk", false);
 
                 animator.SetBool("idle1", false);
+                animator.SetBool("idle2", false);
+
 
             }
             else if (x > 0 && y == 0)
@@ -73,6 +77,8 @@ namespace Timoteo
                 animator.SetBool("rightwalk", false);
 
                 animator.SetBool("idle1", false);
+                animator.SetBool("idle2", false);
+
 
             }
             else if (x < 0 && y == 0)
@@ -83,6 +89,8 @@ namespace Timoteo
                 animator.SetBool("rightwalk", true);
 
                 animator.SetBool("idle1", false);
+                animator.SetBool("idle2", false);
+
 
             }
             else if (x == 0 && y > 0)
@@ -93,6 +101,8 @@ namespace Timoteo
                 animator.SetBool("rightwalk", false);
 
                 animator.SetBool("idle1", false);
+                animator.SetBool("idle2", false);
+
 
             }
             else if (x == 0 && y < 0)
@@ -103,6 +113,8 @@ namespace Timoteo
                 animator.SetBool("rightwalk", false);
 
                 animator.SetBool("idle1", false);
+                animator.SetBool("idle2", false);
+
             }
             else if (x == 0 && y == 0)
             {
@@ -111,25 +123,27 @@ namespace Timoteo
                 animator.SetBool("leftwalk", false);
                 animator.SetBool("rightwalk", false);
 
-                animator.SetBool("idle1", true);
 
-               /* if (timerBetweenIdleAnimation <= 0)
-                {
+               if (timerBetweenIdleAnimation <= 0)
+               {
                     animator.SetBool("idle1", false);
-                    animator.SetTrigger("idle2");
-
-                    if (animator.GetCurrentAnimatorClipInfo(0).Length <= 0)
-                    {
-                        timerBetweenIdleAnimation = maxTimerBetweenIdleAnimation;
-                    }
-                }
-                else
-                {
+                    animator.SetBool("idle2",true);
+                    StartCoroutine(AnimationTimer(2.4f));
+               }
+               else
+               {
                     animator.SetBool("idle1", true);
-                }*/
-                  
+               }
             }
+        }
 
+        IEnumerator AnimationTimer(float timer)
+        {
+            yield return new WaitForSeconds(timer);
+            timerBetweenIdleAnimation = maxTimerBetweenIdleAnimation;
+            animator.SetBool("idle2", false);
         }
     }
+
+   
 }

@@ -766,7 +766,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: {x: 5, y: 5}
   jumpForce: 5
-  maxTimerBetweenIdleAnimation: 2
+  maxTimerBetweenIdleAnimation: 10
 --- !u!1 &2111340724
 GameObject:
   m_ObjectHideFlags: 0
