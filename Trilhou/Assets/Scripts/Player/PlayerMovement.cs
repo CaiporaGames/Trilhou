@@ -8,20 +8,33 @@ namespace Timoteo
     //This is a simple player movement. This plays the player animations too. It will probabily change in the future.
     public class PlayerMovement : MonoBehaviour
     {
-        [SerializeField]
-        Vector2 speed = new Vector2(50, 50);
+        [Header("Stats")]
+        [SerializeField] Vector2 speed = new Vector2(50, 50);
         [SerializeField] float jumpForce = 5f;
+        [Tooltip("This timer is to play different idle animations")]
+        [SerializeField] float maxTimerBetweenIdleAnimation = 15;
+
+
+        //   [Private Variables]
         Animator animator;
         bool runOnce = true;
+        float timerBetweenIdleAnimation;
 
 
         private void Start()
         {
-            animator = GetComponentInChildren<Animator>();
+            animator = GetComponentInChildren<Animator>();          
         }
 
         // Update is called once per frame
         void Update()
+        {
+            Movement();
+            timerBetweenIdleAnimation -= Time.deltaTime;
+        }
+
+
+        void Movement()
         {
             float x = Input.GetAxis("Horizontal");
             float y = Input.GetAxis("Vertical");
@@ -32,31 +45,105 @@ namespace Timoteo
 
             transform.Translate(movement);
 
-            if (x > 0 || y > 0 || y < 0 || x < 0)
+            if (x > 0 && y > 0 || x < 0 && y > 0)
             {
-                animator.SetBool("isWalking", true);
-                animator.SetBool("isIdling", false);
+                animator.SetBool("backwalk", true);
+                animator.SetBool("frontwalk", false);
+                animator.SetBool("leftwalk", false);
+                animator.SetBool("rightwalk", false);
+
+                animator.SetBool("idle1", false);
+                animator.SetBool("idle2", false);
+
+
+            }
+            else if (x < 0 && y < 0 || x > 0 && y < 0)
+            {
+                animator.SetBool("backwalk", false);
+                animator.SetBool("frontwalk", true);
+                animator.SetBool("leftwalk", false);
+                animator.SetBool("rightwalk", false);
+
+                animator.SetBool("idle1", false);
+                animator.SetBool("idle2", false);
+
+
+            }
+            else if (x > 0 && y == 0)
+            {
+                animator.SetBool("backwalk", false);
+                animator.SetBool("frontwalk", false);
+                animator.SetBool("leftwalk", true);
+                animator.SetBool("rightwalk", false);
+
+                animator.SetBool("idle1", false);
+                animator.SetBool("idle2", false);
+
+
+            }
+            else if (x < 0 && y == 0)
+            {
+                animator.SetBool("backwalk", false);
+                animator.SetBool("frontwalk", false);
+                animator.SetBool("leftwalk", false);
+                animator.SetBool("rightwalk", true);
+
+                animator.SetBool("idle1", false);
+                animator.SetBool("idle2", false);
+
+
+            }
+            else if (x == 0 && y > 0)
+            {
+                animator.SetBool("backwalk", true);
+                animator.SetBool("frontwalk", false);
+                animator.SetBool("leftwalk", false);
+                animator.SetBool("rightwalk", false);
+
+                animator.SetBool("idle1", false);
+                animator.SetBool("idle2", false);
+
+
+            }
+            else if (x == 0 && y < 0)
+            {
+                animator.SetBool("backwalk", false);
+                animator.SetBool("frontwalk", true);
+                animator.SetBool("leftwalk", false);
+                animator.SetBool("rightwalk", false);
+
+                animator.SetBool("idle1", false);
+                animator.SetBool("idle2", false);
 
             }
             else if (x == 0 && y == 0)
             {
-                animator.SetBool("isWalking", false);
-                animator.SetBool("isIdling", true);
-            }
+                animator.SetBool("backwalk", false);
+                animator.SetBool("frontwalk", false);
+                animator.SetBool("leftwalk", false);
+                animator.SetBool("rightwalk", false);
 
-            if (Input.GetKeyDown(KeyCode.Space))
-            {
-                animator.SetBool("isJumping", true);
-                Invoke("SetJumpFalse", 1);
+
+               if (timerBetweenIdleAnimation <= 0)
+               {
+                    animator.SetBool("idle1", false);
+                    animator.SetBool("idle2",true);
+                    StartCoroutine(AnimationTimer(2.4f));
+               }
+               else
+               {
+                    animator.SetBool("idle1", true);
+               }
             }
         }
 
-        string SetJumpFalse()
+        IEnumerator AnimationTimer(float timer)
         {
-            animator.SetBool("isIdling", true);
-            return "false";
+            yield return new WaitForSeconds(timer);
+            timerBetweenIdleAnimation = maxTimerBetweenIdleAnimation;
+            animator.SetBool("idle2", false);
         }
-
-
     }
+
+   
 }
