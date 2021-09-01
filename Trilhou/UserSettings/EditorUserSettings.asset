@@ -6,34 +6,34 @@ EditorUserSettings:
   serializedVersion: 4
   m_ConfigSettings:
     RecentlyUsedScenePath-0:
-      value: 2242470311464677080f021607265a1e5932002b21382a353e662e30e7ee312badd737fdef092f30300cea190a3a0d3ae119471ef8021e12
-      flags: 0
-    RecentlyUsedScenePath-1:
       value: 2242470311464677080f021607265a1e5932002b21382a353e662e30e7ee312badcb39eee81936323c0fee280d3d4f2afc031d12
       flags: 0
-    RecentlyUsedScenePath-2:
+    RecentlyUsedScenePath-1:
       value: 22424703114646680e0b0227036c6c111b07142f1f2b233e2867083debf42d
       flags: 0
-    RecentlyUsedScenePath-3:
+    RecentlyUsedScenePath-2:
       value: 22424703114646680e0b0227036c6e0517050c25093b25253f265326ece92021
       flags: 0
-    RecentlyUsedScenePath-4:
+    RecentlyUsedScenePath-3:
       value: 22424703114646680e0b0227036c761e0205172e392b323922275326ece92021
       flags: 0
-    RecentlyUsedScenePath-5:
+    RecentlyUsedScenePath-4:
       value: 22424703114646680e0b0227036c761e0205172e392b323922275202f7e1262cedc225eaf22830722c0ce6281d
       flags: 0
-    RecentlyUsedScenePath-6:
-      value: 22424703114646680e0b0227036c7315001214157d670f3e393b1237f7e32031ede978fce9332b25
-      flags: 0
-    RecentlyUsedScenePath-7:
+    RecentlyUsedScenePath-5:
       value: 22424703114646680e0b0227036c7315001214157d67013f2a2e1136f1ae2136ebf32f
       flags: 0
-    RecentlyUsedScenePath-8:
+    RecentlyUsedScenePath-6:
       value: 22424703114646680e0b0227036c7315001214157d6717252c3b093cc7f3372df0e878fce9332b25
       flags: 0
-    RecentlyUsedScenePath-9:
+    RecentlyUsedScenePath-7:
       value: 22424703114646680e0b0227036c6b1505031d65182d35241e2a183de7ae2136ebf32f
+      flags: 0
+    RecentlyUsedScenePath-8:
+      value: 224247031146466b0c07023615271f3827574a0e6c0e2922283a0973cfe53031e7f137e5a7183e3f3205fd3311300570d7120806e6070f185e3dfe0b1ffa5e061fcc0cdc
+      flags: 0
+    RecentlyUsedScenePath-9:
+      value: 22424703114646680e0b0227036c7315001214157d670f3e393b1237f7e32031ede978fce9332b25
       flags: 0
     vcSharedLogLevel:
       value: 0d5e400f0650
