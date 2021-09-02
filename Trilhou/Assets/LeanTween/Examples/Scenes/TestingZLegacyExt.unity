@@ -98,7 +98,8 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: 21cc6dc113be85e4abe7c2bbcc72be6d, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 21cc6dc113be85e4abe7c2bbcc72be6d,
+    type: 2}
 --- !u!196 &5
 NavMeshSettings:
   serializedVersion: 2
@@ -1214,7 +1215,8 @@ SphereCollider:
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
 --- !u!1 &1978188353 stripped
 GameObject:
-  m_CorrespondingSourceObject: {fileID: 100004, guid: f6cb897ad03b148b0b891659e4337604, type: 3}
+  m_CorrespondingSourceObject: {fileID: 100004, guid: f6cb897ad03b148b0b891659e4337604,
+    type: 3}
   m_PrefabInstance: {fileID: 272235346}
   m_PrefabAsset: {fileID: 0}
 --- !u!54 &1978188355

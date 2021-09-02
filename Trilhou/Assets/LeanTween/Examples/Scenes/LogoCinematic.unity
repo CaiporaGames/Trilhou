@@ -98,7 +98,8 @@ LightmapSettings:
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
   m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 4890085278179872738, guid: b055584600d17514f8589ce95ecb91df, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: b055584600d17514f8589ce95ecb91df,
+    type: 2}
 --- !u!196 &5
 NavMeshSettings:
   serializedVersion: 2
@@ -126,7 +127,8 @@ NavMeshSettings:
 --- !u!1 &299570809
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 100004, guid: 7d6f6aee277594029851a7cc81d550d5, type: 3}
+  m_CorrespondingSourceObject: {fileID: 100004, guid: 7d6f6aee277594029851a7cc81d550d5,
+    type: 3}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
@@ -144,7 +146,8 @@ GameObject:
 --- !u!4 &299570810
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 400004, guid: 7d6f6aee277594029851a7cc81d550d5, type: 3}
+  m_CorrespondingSourceObject: {fileID: 400004, guid: 7d6f6aee277594029851a7cc81d550d5,
+    type: 3}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299570809}
@@ -158,7 +161,8 @@ Transform:
 --- !u!23 &299570811
 MeshRenderer:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 2300002, guid: 7d6f6aee277594029851a7cc81d550d5, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2300002, guid: 7d6f6aee277594029851a7cc81d550d5,
+    type: 3}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299570809}
@@ -199,7 +203,8 @@ MeshRenderer:
 --- !u!33 &299570812
 MeshFilter:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3300002, guid: 7d6f6aee277594029851a7cc81d550d5, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3300002, guid: 7d6f6aee277594029851a7cc81d550d5,
+    type: 3}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 299570809}
@@ -734,7 +739,8 @@ Light:
 --- !u!1 &1182749509
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 100000, guid: 7d6f6aee277594029851a7cc81d550d5, type: 3}
+  m_CorrespondingSourceObject: {fileID: 100000, guid: 7d6f6aee277594029851a7cc81d550d5,
+    type: 3}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
@@ -752,7 +758,8 @@ GameObject:
 --- !u!4 &1182749510
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 400000, guid: 7d6f6aee277594029851a7cc81d550d5, type: 3}
+  m_CorrespondingSourceObject: {fileID: 400000, guid: 7d6f6aee277594029851a7cc81d550d5,
+    type: 3}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1182749509}
@@ -766,7 +773,8 @@ Transform:
 --- !u!23 &1182749511
 MeshRenderer:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 2300000, guid: 7d6f6aee277594029851a7cc81d550d5, type: 3}
+  m_CorrespondingSourceObject: {fileID: 2300000, guid: 7d6f6aee277594029851a7cc81d550d5,
+    type: 3}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1182749509}
@@ -807,7 +815,8 @@ MeshRenderer:
 --- !u!33 &1182749512
 MeshFilter:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 3300000, guid: 7d6f6aee277594029851a7cc81d550d5, type: 3}
+  m_CorrespondingSourceObject: {fileID: 3300000, guid: 7d6f6aee277594029851a7cc81d550d5,
+    type: 3}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1182749509}
