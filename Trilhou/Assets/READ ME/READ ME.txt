@@ -51,3 +51,22 @@
 - No script binocular zoom tem que atribuir a figura a qual sera dado o zoom do binoculo.
 - Esta faze tem a parte onde o player comeca sem estar usando o binoculo e depois ele vai para o binoculo. Controla-se isso com as duas 
        regioes que estao na hieraquia. So ativar/desativar o que precisar
+
+
+
+#################### Assets Credits ##################
+  Asset name: Simple 64x64 brick.
+  Attribution: http://alpharats.com
+  Licence: CC-BY 3.0
+
+   ------
+
+  Asset name: Free 2D Adventure Beach Background
+  Attribution: No need
+  Licence: Standard Unity Asset Store EULA
+
+  ------
+
+  Asset name: Forest Background Art
+  Attribution: Tamara Ramsay http://vectorgurl.com/
+  Licence: CC-BY-SA 3.0

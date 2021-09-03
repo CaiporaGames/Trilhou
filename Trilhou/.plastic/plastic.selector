@@ -1,0 +1,4 @@
+repository "Trilhou@CaiporaGames@cloud"
+  path "/"
+    br "/main"
+    co "/main"
