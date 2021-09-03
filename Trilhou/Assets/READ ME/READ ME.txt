@@ -34,11 +34,17 @@
 
                             ### Como usar Dialogue System ###
 
-- Adicionar novos dialogos: Entre na pasta scriptableObject -> Click em dialogue -> aperte o botao de +. Escreva o que desejar
+- Como configurar o dialogue na fase: Arraste o dialogueCnavas e o dialogueManger para a cena. Vá nos botões de NextBTN and BackBTN no canvas
+        e no campo chamado OnClick arraste o dialogueManager para a caixa, se o botão é o NextBTN, onde aparece no function selecione a opção: DialogueManager -> 
+        NextDialogue. Se o botão é o BackBTN, onde aparece no function selecione: DialogeManager -> BackDialogue
+
+- Adicionar novos dialogos: Entre na pasta scriptableObject -> Click com o botão direito do mouse vá em: Create -> ScriptableObjects -> 
+Dialogue. Um novo asset sera criado. Renome-o. -> Click no seu novo asset -> aperte o botao de +. Escreva o que desejar
        como dialogo. Coloque no nome do personagem na parte chamada names.
 
 - Alterar ordem das falas no dialogo: Entre na pasta scriptableObject -> Click em dialogue -> segure com o botão esquerdo do mouse,
        nos 2 tracos do lado esquerdo da sentenca e arraste para a posição desejada.
+
 
                             ### Como usar o point bar ###
 
