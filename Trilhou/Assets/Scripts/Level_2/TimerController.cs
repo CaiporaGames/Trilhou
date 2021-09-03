@@ -9,14 +9,25 @@ public class TimerController : MonoBehaviour
 {
     public static TimerController instance;
 
-    public TMP_Text timeCounter;
+    [SerializeField]
+    private TMP_Text timeCounter;
 
-    public TMP_Text counter;
+    [SerializeField]
+    private TMP_Text counter;
+
+    [SerializeField]
+    private TMP_Text feedBackCollision;
+
+    [SerializeField]
+    private float initialTime;
 
     private TimeSpan timePlaying;
     private bool timerGoing;
-
     private float elapsedTime;
+
+    private float timeToAppear = 2f;
+    private float timeWhenDisappear;
+    private bool feedBackOnScreen;
 
     private void Awake()
     {
@@ -28,11 +39,19 @@ public class TimerController : MonoBehaviour
         timerGoing = false;
     }
 
+    private void Update()
+    {
+        if (feedBackOnScreen  && (Time.time >= timeWhenDisappear))
+        {
+            this.feedBackOnScreen = false;
+            this.feedBackCollision.gameObject.SetActive(false);
+        }
+    }
     public void BeginTimer() {
         timeCounter.text = "Tempo: 00:00:00";
         counter.text = "0";
         timerGoing = true;
-        elapsedTime = 0f;
+        elapsedTime = initialTime;
 
         StartCoroutine(UpdateTimer());
     }
@@ -43,7 +62,7 @@ public class TimerController : MonoBehaviour
 
     private IEnumerator UpdateTimer(){
         while (timerGoing) {
-            elapsedTime += Time.deltaTime;
+            elapsedTime = elapsedTime - Time.deltaTime;
             timePlaying = TimeSpan.FromSeconds(elapsedTime);
             string timePlayingStr = "Tempo:  " + timePlaying.ToString("mm':'ss'.'ff");
             timeCounter.text = timePlayingStr;
@@ -52,8 +71,16 @@ public class TimerController : MonoBehaviour
         }
     }
 
-    public void incrementCounter(int score) {
+    public void IncrementCounter(int score) {
         counter.text = "" + score;
+    }
+
+    public void Collision(string text)
+    {
+        this.feedBackCollision.gameObject.SetActive(true);  
+        this.feedBackCollision.text = text;
+        this.feedBackOnScreen = true;
+        timeWhenDisappear = Time.time + timeToAppear;
     }
 
 }
