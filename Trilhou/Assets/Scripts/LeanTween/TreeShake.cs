@@ -26,7 +26,7 @@ namespace Timoteo
             {
                 delay = Random.Range(minRandomTime, maxRandomTime);
             }
-
+            
             LeanTween.rotateZ(gameObject, shakeAngle, shakeDuration).setEasePunch().setOnComplete(Shake).setDelay(delay);
         }
 

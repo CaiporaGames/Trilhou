@@ -2428,6 +2428,17 @@ MonoBehaviour:
   randomizeTheDelay: 1
   minRandomTime: 1
   maxRandomTime: 2
+--- !u!114 &678341691 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2048479722328672473, guid: 103ea72f4fbea8f46acdde691c5fc3af, type: 3}
+  m_PrefabInstance: {fileID: 1173164948}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 15443bb13d7850e48a630df35e766998, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &704500941
 GameObject:
   m_ObjectHideFlags: 0
@@ -10818,11 +10829,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5890898558964393393, guid: 55a8b33db44abb34bb048590b96a5019, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4.27
+      value: 4.33
       objectReference: {fileID: 0}
     - target: {fileID: 5890898558964393393, guid: 55a8b33db44abb34bb048590b96a5019, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -3.64
+      value: -3.54
       objectReference: {fileID: 0}
     - target: {fileID: 5890898558964393393, guid: 55a8b33db44abb34bb048590b96a5019, type: 3}
       propertyPath: m_LocalPosition.z
@@ -11667,9 +11678,21 @@ PrefabInstance:
       propertyPath: m_Color.r
       value: 0.26666668
       objectReference: {fileID: 0}
+    - target: {fileID: 8889693519467546411, guid: 3b30fde2023d6e7419b17582e674c33b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 678341691}
+    - target: {fileID: 8889693519467546411, guid: 3b30fde2023d6e7419b17582e674c33b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: BackDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 8889693519467546411, guid: 3b30fde2023d6e7419b17582e674c33b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Timoteo.DialogueManager, Assembly-CSharp
+      objectReference: {fileID: 0}
     - target: {fileID: 8889693519623344936, guid: 3b30fde2023d6e7419b17582e674c33b, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8889693520549696481, guid: 3b30fde2023d6e7419b17582e674c33b, type: 3}
       propertyPath: m_Pivot.x
@@ -11759,6 +11782,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Canvas
       objectReference: {fileID: 0}
+    - target: {fileID: 8889693520549696485, guid: 3b30fde2023d6e7419b17582e674c33b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8889693520808970945, guid: 3b30fde2023d6e7419b17582e674c33b, type: 3}
       propertyPath: m_Color.b
       value: 0.19607843
@@ -11770,6 +11797,18 @@ PrefabInstance:
     - target: {fileID: 8889693520808970945, guid: 3b30fde2023d6e7419b17582e674c33b, type: 3}
       propertyPath: m_Color.r
       value: 0.26666668
+      objectReference: {fileID: 0}
+    - target: {fileID: 8889693520808970947, guid: 3b30fde2023d6e7419b17582e674c33b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 678341691}
+    - target: {fileID: 8889693520808970947, guid: 3b30fde2023d6e7419b17582e674c33b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: NextDialogue
+      objectReference: {fileID: 0}
+    - target: {fileID: 8889693520808970947, guid: 3b30fde2023d6e7419b17582e674c33b, type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Timoteo.DialogueManager, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 8889693520808970950, guid: 3b30fde2023d6e7419b17582e674c33b, type: 3}
       propertyPath: m_AnchoredPosition.x
