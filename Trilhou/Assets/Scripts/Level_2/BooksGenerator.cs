@@ -13,16 +13,14 @@ public class BooksGenerator : MonoBehaviour
 
     System.Random random = new System.Random();
 
-    [SerializeField]
-    private string[] colors = new string[]{ "blue", "red", "yellow", "green", "grey", "white" };
+    private string[] colors = new string[]{ "blue", "red", "yellow", "green", "black", "white" };
 
     // Start is called before the first frame update
-    void Start(){
-        GameObject livro = Instantiate(book, transform.position, Quaternion.identity);
+    void Awake(){
         string color = RandomColor();
-
-        livro.transform.SetParent(this.transform);
+        GameObject livro = Instantiate(book, transform.position, Quaternion.identity);
         livro.SendMessage("SetColor", color);
+        livro.transform.SetParent(this.transform);
     }
 
 
