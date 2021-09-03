@@ -8610,7 +8610,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2048479722328672472, guid: 103ea72f4fbea8f46acdde691c5fc3af, type: 3}
       propertyPath: m_Name
-      value: DialogueManager (1)
+      value: DialogueManager
       objectReference: {fileID: 0}
     - target: {fileID: 2048479722328672473, guid: 103ea72f4fbea8f46acdde691c5fc3af, type: 3}
       propertyPath: dialogueText
