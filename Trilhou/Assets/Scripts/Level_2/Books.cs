@@ -9,8 +9,33 @@ public class Books : MonoBehaviour
     [SerializeField]
     private string color;
     
-    public void SetColor(string color){   
+    public void SetColor(string color){
         this.color = color;
+
+        if (color == "white") {
+            this.GetComponent<SpriteRenderer>().color = Color.white;
+        }
+        else if (color == "red")
+        {
+            this.GetComponent<SpriteRenderer>().color = Color.red;
+        }
+        else if(color == "blue")
+        {
+            this.GetComponent<SpriteRenderer>().color = Color.blue;
+        }
+        else if(color == "yellow")
+        {
+            this.GetComponent<SpriteRenderer>().color = Color.yellow;
+        }
+        else if(color == "black")
+        {
+            this.GetComponent<SpriteRenderer>().color = Color.black;
+        }
+        else if (color == "green")
+        {
+            this.GetComponent<SpriteRenderer>().color = Color.green;
+        }
+
     }
 
     public string GetColor() {
