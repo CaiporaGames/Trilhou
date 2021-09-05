@@ -45,4 +45,9 @@
 - Chame a funcão AddToPointsBar() para adicionar pontos na barra de points.
 
 
-                            
+                            ### Como usar binoculos###
+
+- No script the moveFOurDirections controle a velocidade e quanto do mapa o player pode olhar com o binoculo.
+- No script binocular zoom tem que atribuir a figura a qual sera dado o zoom do binoculo.
+- Esta faze tem a parte onde o player comeca sem estar usando o binoculo e depois ele vai para o binoculo. Controla-se isso com as duas 
+       regioes que estao na hieraquia. So ativar/desativar o que precisar
