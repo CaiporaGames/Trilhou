@@ -6,13 +6,17 @@ namespace Timoteo {
     public class CloudMovement : MonoBehaviour
     {
         [Header("Horizontal Movement")]
+        [Tooltip("How much the player is moving in the x direction")]
         [SerializeField] float xDirection;
+        [Tooltip("Time in seconds between cicle repetition")]
         [SerializeField] float timeBetweenCicles;
+        [Tooltip("Time in seconds before cicle start or restart")]
         [SerializeField] float delayBetweenCicles;
         [SerializeField] float minDelayTime;
         [SerializeField] float maxDelayTime;
 
         [Header("Vertical Movement")]
+        [Tooltip("How much the cloud must go up to disappear from screen")]
         [SerializeField] float yDirection;
         void Start()//Left to right movement
         {
