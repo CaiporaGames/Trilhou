@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 187b07c4a4c122742bd7d64ed420b162
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Qebab Shadow FFP
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 12da251391ebf4a49bf0735d882a09fa, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

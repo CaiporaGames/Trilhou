@@ -4,51 +4,72 @@ using UnityEngine;
 
 public class LevelManager : MonoBehaviour
 {
-    private int score;
-    [SerializeField]
-    private int maxPontuation;
-    [SerializeField]
-    private GameObject shelfPreFab;
-    [SerializeField]
-    private GameObject[] shelfs;
-    [SerializeField]
-    private WindowPointer windowPointer;
+    [SerializeField] private int maxPontuation;
+    [SerializeField] private GameObject shelfPreFab;
+    [SerializeField] private GameObject[] shelfs;
+    [SerializeField] private GameObject[] desks;
+    [SerializeField] private WindowPointer windowPointer;
 
-    private bool playing;
+    private int score;
+    private bool isPlaying;
     private TimerController timerController;
+    private SoundManager soundManager;
     private List<string> colors = new List<string> { "blue", "red", "yellow", "green", "black", "white"};
     System.Random random = new System.Random();
 
 
     void Awake(){
-        this.timerController = this.gameObject.GetComponent<TimerController>();
-        this.score = 0;
+        timerController = gameObject.GetComponent<TimerController>();
+        soundManager = gameObject.GetComponent<SoundManager>();
+        transform.GetChild(3).gameObject.SetActive(false);
+        score = 0;
+        isPlaying = false;
         InstantiateShelf();
-    }
-
-    void Start(){
-
     }
 
     //Checa se a pontuação maxima foi atingida para encerrar o timer
     void Update(){
-        if (score == maxPontuation && playing) {
-            this.timerController.EndTimer();
-            this.playing = false;
-            timerController.Collision("Voce conseguiu!!");
+        if (isPlaying) {
+            if (score == maxPontuation) {
+                StopPlaying();
+                WinFeedBack();
+            }
+            if (timerController.GetTimer() == 0) {
+                StopPlaying();
+                LoseFeedBack();
+            } 
         }
     }
 
     //Inicia o Timer da partida.
     private void StartPlaying() {
-        this.timerController.BeginTimer();
-        this.playing = true;
+        timerController.VisualFeedBack("Começouu!!");
+        timerController.BeginTimer();
+        isPlaying = true;
+        transform.GetChild(1).SendMessage("StartPlaying");
+        foreach (GameObject desk in desks)
+        {
+            TweenDesk tweenDesk = desk.GetComponent<TweenDesk>();
+            tweenDesk.BeginMove();
+        }
+    }
+    private void StopPlaying() {
+        timerController.EndTimer();
+        isPlaying = false;
+        transform.GetChild(0).transform.GetChild(0).SendMessage("StopPlaying");
+        transform.GetChild(1).SendMessage("StopPlaying");
+        transform.GetChild(3).gameObject.SetActive(true);
+        foreach (GameObject desk in desks)
+        {
+            TweenDesk tweenDesk = desk.GetComponent<TweenDesk>();
+            tweenDesk.StopMove();
+        }
     }
 
     //Incrementa o contador de pontuação.
-    private void IncrementCounter(int score) {
-        this.score += score;
-        this.timerController.IncrementCounter(score);
+    private void IncrementCounter() {
+        score += 1;
+        timerController.SetScore(score);
     }
 
     //Instancia todas as estantes na posição definida, isso feito atraves da lista de GameObjects,
@@ -72,10 +93,10 @@ public class LevelManager : MonoBehaviour
     }
 
     //Inicializa a seta indicativa de acordo com a estante correta para o livro passado.
-    private void SetGuide(GameObject book) {
+    private void TookBook(GameObject book) {
+        //efeito sonoro pegou o livro
         string bookColor = book.GetComponent<Books>().GetColor();
         GameObject shelf = FindGuideShelf(bookColor);
-
         windowPointer.Show(shelf.transform.position);
     }
 
@@ -98,15 +119,30 @@ public class LevelManager : MonoBehaviour
     //quando Maria livrão colide com a estante correta
     private void RightCollision() {
         windowPointer.Hide();
-        timerController.Collision("Estante Correta!!");
+        soundManager.PlayRightShelf();
+        timerController.VisualFeedBack("Estante Correta!!");
         //animação para pontuação
         //efeito sonoro
     }
 
     //quando Maria livrão colide com a estante errada
     private void WrongCollision() {
-        timerController.Collision("Estante Incorreta!!");
+        soundManager.PlayWrongShelf();
+        timerController.VisualFeedBack("Estante Incorreta!!");
         //animação para erro
         //efeito sonoro
+    }
+
+    private void WinFeedBack()
+    {
+        //efeito sonoro
+        soundManager.PlayWonGame();
+        timerController.VisualFeedBack("Voce conseguiu!!");
+    }
+
+    private void LoseFeedBack()
+    {
+        //efeito sonoro
+        timerController.VisualFeedBack("Não foi dessa vez");
     }
 }

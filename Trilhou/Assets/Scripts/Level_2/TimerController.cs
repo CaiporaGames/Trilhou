@@ -9,17 +9,10 @@ public class TimerController : MonoBehaviour
 {
     public static TimerController instance;
 
-    [SerializeField]
-    private TMP_Text timeCounter;
-
-    [SerializeField]
-    private TMP_Text counter;
-
-    [SerializeField]
-    private TMP_Text feedBackCollision;
-
-    [SerializeField]
-    private float initialTime;
+    [SerializeField] private TMP_Text timeCounter;
+    [SerializeField] private TMP_Text counter;
+    [SerializeField] private TMP_Text visualFeedBack;
+    [SerializeField] private float initialTime;
 
     private TimeSpan timePlaying;
     private bool timerGoing;
@@ -28,6 +21,7 @@ public class TimerController : MonoBehaviour
     private float timeToAppear = 2f;
     private float timeWhenDisappear;
     private bool feedBackOnScreen;
+    private TweenText tweenCounter;
 
     private void Awake()
     {
@@ -36,6 +30,7 @@ public class TimerController : MonoBehaviour
 
     private void Start()
     {
+        tweenCounter = counter.gameObject.GetComponent<TweenText>();
         timerGoing = false;
     }
 
@@ -43,8 +38,8 @@ public class TimerController : MonoBehaviour
     {
         if (feedBackOnScreen  && (Time.time >= timeWhenDisappear))
         {
-            this.feedBackOnScreen = false;
-            this.feedBackCollision.gameObject.SetActive(false);
+            feedBackOnScreen = false;
+            visualFeedBack.gameObject.SetActive(false);
         }
     }
     public void BeginTimer() {
@@ -61,26 +56,42 @@ public class TimerController : MonoBehaviour
     }
 
     private IEnumerator UpdateTimer(){
-        while (timerGoing) {
+        bool flag = true;
+        bool flag2 = true;
+        while (timerGoing && elapsedTime > 0) {
             elapsedTime = elapsedTime - Time.deltaTime;
             timePlaying = TimeSpan.FromSeconds(elapsedTime);
-            string timePlayingStr = "Tempo:  " + timePlaying.ToString("mm':'ss'.'ff");
+            string timePlayingStr = " " + timePlaying.ToString("mm':'ss'.'ff");
             timeCounter.text = timePlayingStr;
+            if (flag && elapsedTime < 60 && elapsedTime > 30 ) {
+                flag = false;
+                //mudar a cor
+                //this.GetComponent<SpriteRenderer>().color = Color.white;
+            }
+            if (flag2 && elapsedTime < 30) {
+                flag2 = false;
+                //mudar a cor
+                //this.GetComponent<SpriteRenderer>().color = Color.white;
+            }
 
             yield return null;
         }
+
     }
 
-    public void IncrementCounter(int score) {
+    public float GetTimer() {
+        return elapsedTime;
+    }
+    public void SetScore(int score) {
+        tweenCounter.SendMessage("Tween");
         counter.text = "" + score;
     }
 
-    public void Collision(string text)
+    public void VisualFeedBack(string text)
     {
-        this.feedBackCollision.gameObject.SetActive(true);  
-        this.feedBackCollision.text = text;
-        this.feedBackOnScreen = true;
+        visualFeedBack.gameObject.SetActive(true);
+        visualFeedBack.text = text;
+        feedBackOnScreen = true;
         timeWhenDisappear = Time.time + timeToAppear;
     }
-
 }
