@@ -20,7 +20,8 @@ public class LevelManager : MonoBehaviour
     System.Random random = new System.Random();
 
 
-    void Awake(){
+    void Awake()
+    {
         this.timerController = this.gameObject.GetComponent<TimerController>();
         this.score = 0;
         InstantiateShelf();

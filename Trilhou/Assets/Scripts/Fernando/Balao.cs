@@ -10,7 +10,7 @@ public class Balao : MonoBehaviour
         {
             Debug.Log("Colidiu...");
             gameObject.SetActive(false);
-            LevelManager.levelManager.SetBaloes();
+            LevelManagerBalloon.levelManager.SetBaloes();
         }
     }
 }
