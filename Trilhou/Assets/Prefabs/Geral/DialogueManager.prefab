@@ -45,3 +45,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   dialogues: {fileID: 11400000, guid: 047d222e91a37f649a519e433ce5ae24, type: 2}
   dialogueText: {fileID: 0}
+  setenceIndex: 0

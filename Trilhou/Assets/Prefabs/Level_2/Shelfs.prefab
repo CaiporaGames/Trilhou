@@ -287,6 +287,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7457749314709714991}
   - component: {fileID: 7457749314709714990}
+  - component: {fileID: 3832075503764007035}
   m_Layer: 0
   m_Name: Estante (2)
   m_TagString: Untagged
@@ -359,6 +360,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3832075503764007035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7457749314709714984}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f0b6f902657004da49d522c72f6f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrder: 5000
+  offset: 0
+  runOnlyOnce: 0
 --- !u!1 &7457749315284998706
 GameObject:
   m_ObjectHideFlags: 0
@@ -369,6 +385,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7457749315284998705}
   - component: {fileID: 7457749315284998704}
+  - component: {fileID: 1510915104811475523}
   m_Layer: 0
   m_Name: Estante (3)
   m_TagString: Untagged
@@ -441,6 +458,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1510915104811475523
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7457749315284998706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f0b6f902657004da49d522c72f6f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrder: 5000
+  offset: 0
+  runOnlyOnce: 0
 --- !u!1 &7457749315333709545
 GameObject:
   m_ObjectHideFlags: 0
@@ -451,6 +483,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7457749315333709544}
   - component: {fileID: 7457749315333709551}
+  - component: {fileID: 5335103430000566119}
   m_Layer: 0
   m_Name: Estante
   m_TagString: Untagged
@@ -523,6 +556,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &5335103430000566119
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7457749315333709545}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f0b6f902657004da49d522c72f6f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrder: 5000
+  offset: 0
+  runOnlyOnce: 0
 --- !u!1 &7457749315374251047
 GameObject:
   m_ObjectHideFlags: 0
@@ -533,6 +581,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7457749315374251046}
   - component: {fileID: 7457749315374251045}
+  - component: {fileID: 3879409554999273884}
   m_Layer: 0
   m_Name: Estante (1)
   m_TagString: Untagged
@@ -605,6 +654,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &3879409554999273884
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7457749315374251047}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f0b6f902657004da49d522c72f6f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrder: 5000
+  offset: 0
+  runOnlyOnce: 0
 --- !u!1 &7457749315778948994
 GameObject:
   m_ObjectHideFlags: 0
@@ -615,6 +679,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7457749315778948993}
   - component: {fileID: 7457749315778948992}
+  - component: {fileID: 69176902158365473}
   m_Layer: 0
   m_Name: Estante (5)
   m_TagString: Untagged
@@ -687,6 +752,21 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &69176902158365473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7457749315778948994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f0b6f902657004da49d522c72f6f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrder: 5000
+  offset: 0
+  runOnlyOnce: 0
 --- !u!1 &7457749315923347343
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,6 +777,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7457749315923347342}
   - component: {fileID: 7457749315923347341}
+  - component: {fileID: 2000954104899331483}
   m_Layer: 0
   m_Name: Estante (4)
   m_TagString: Untagged
@@ -769,3 +850,18 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &2000954104899331483
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7457749315923347343}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81f0b6f902657004da49d522c72f6f88, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sortingOrder: 5000
+  offset: 0
+  runOnlyOnce: 0
