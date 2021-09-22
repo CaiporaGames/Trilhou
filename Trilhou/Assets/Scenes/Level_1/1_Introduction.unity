@@ -4597,6 +4597,10 @@ PrefabInstance:
       value: DialogueManager
       objectReference: {fileID: 0}
     - target: {fileID: 2048479722328672473, guid: 103ea72f4fbea8f46acdde691c5fc3af, type: 3}
+      propertyPath: dialogues
+      value: 
+      objectReference: {fileID: 11400000, guid: 047d222e91a37f649a519e433ce5ae24, type: 2}
+    - target: {fileID: 2048479722328672473, guid: 103ea72f4fbea8f46acdde691c5fc3af, type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 853001840}
