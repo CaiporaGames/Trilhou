@@ -1045,15 +1045,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6d8ce1cd0eb00fe4abd8eed77feb3fe6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _cameras:
-  - {fileID: 1885423058}
-  - {fileID: 557412977}
-  positions:
-  - {x: -5.15, y: 16, z: -10}
-  - {x: 0, y: 16, z: -10}
-  - {x: 5.88, y: 2.17, z: -10}
-  - {x: 1.5, y: 0.5, z: -10}
-  timer: 5
 --- !u!1 &1231173685
 GameObject:
   m_ObjectHideFlags: 0

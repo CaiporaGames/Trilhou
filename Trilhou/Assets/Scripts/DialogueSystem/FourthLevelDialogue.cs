@@ -3,60 +3,54 @@ using System.Collections.Generic;
 using UnityEngine;
 
 namespace Timoteo {
-    public class FourthLevelDialogue : MonoBehaviour, ICameraController
+    public class FourthLevelDialogue : MonoBehaviour//, ICameraController
     {
-        [SerializeField] Camera[] _cameras;
-        [Tooltip("How long takes to camera size returns to normal")]
-        [SerializeField] Vector3[] positions;
-        [SerializeField] float timer = 15;
+        int dialogueIndex;
 
-
-        public void Controller(byte index)//cameras[0] scene 1.
+        public void Camera2DMovement(Transform startPoint, Transform endPoint, int index, Camera A, Camera B, float time, float zoom, bool zoomOut = false)
         {
-
-            if (index < 3)
+            if (index == dialogueIndex)
             {
-                _cameras[0].gameObject.SetActive(false);
-                _cameras[1].gameObject.SetActive(true);
+                B.gameObject.SetActive(false);
+                A.gameObject.SetActive(true);
 
-                _cameras[1].gameObject.GetComponent<Camera>().orthographicSize = 2;
-                LeanTween.move(_cameras[1].gameObject, positions[0], 0);              
-                LeanTween.move(_cameras[1].gameObject, positions[1], 15);
-                StartCoroutine(ZoomOut(1));
+                LeanTween.move(A.gameObject, startPoint, 0);
+                LeanTween.move(A.gameObject, endPoint, time);
+
+                A.GetComponent<Camera>().orthographicSize = zoom;
+
+                if (zoomOut)
+                {
+                    StartCoroutine(ZoomOut(A, zoom, time));
+                }
+                else
+                {
+                    StartCoroutine(ZoomIn(A, zoom, time));
+                }
 
             }
-            else if (index < 5)
-            {
-                StopCoroutine(ZoomOut(1));
-                _cameras[1].gameObject.SetActive(false);
-                _cameras[0].gameObject.SetActive(true);
+        }
 
-                _cameras[0].gameObject.GetComponent<Camera>().orthographicSize = 2;
-                LeanTween.move(_cameras[0].gameObject, positions[2], 0);
-                LeanTween.move(_cameras[0].gameObject, positions[3], 15);
-                StartCoroutine(ZoomOut(0));
-            }
-        }     
+
         
-        IEnumerator ZoomOut(int cameraIndex)
+        IEnumerator ZoomOut(Camera A, float zoom, float time)
         {
-            while (_cameras[cameraIndex].gameObject.GetComponent<Camera>().orthographicSize <= 5)
+            while (A.gameObject.GetComponent<Camera>().orthographicSize <= zoom)
             {
                 yield return null;
-                _cameras[cameraIndex].gameObject.GetComponent<Camera>().orthographicSize
-                    += Time.deltaTime / timer;
+                A.gameObject.GetComponent<Camera>().orthographicSize
+                    += Time.deltaTime / time;
 
             }           
         }
 
-        IEnumerator ZoomIn()
+        IEnumerator ZoomIn(Camera A, float zoom, float time)
         {
-
-            while (_cameras[1].gameObject.GetComponent<Camera>().orthographicSize >= 2)
+            while (A.gameObject.GetComponent<Camera>().orthographicSize >= zoom)
             {
                 yield return null;
-                _cameras[1].gameObject.GetComponent<Camera>().orthographicSize
-                    -= Time.deltaTime / timer;
+                A.gameObject.GetComponent<Camera>().orthographicSize
+                    -= Time.deltaTime / time;
             }
         }
     }
