@@ -5,6 +5,7 @@ using UnityEngine;
 namespace Timoteo {
     public class CinemachineManager : MonoBehaviour
     {
+
         byte setenceIndex;//This index is the same as the dialogue but it cannot came back
         ICameraController cameraController;
 
@@ -22,8 +23,8 @@ namespace Timoteo {
         }
 
         void CameraController()
-        {
-            cameraController.Controller(setenceIndex);
+        {            
+            cameraController.Camera2DMovement(setenceIndex);
         }
 
   

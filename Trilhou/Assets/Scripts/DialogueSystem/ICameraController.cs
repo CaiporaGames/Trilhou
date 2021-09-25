@@ -6,6 +6,6 @@ namespace Timoteo
 {
     public interface ICameraController
     {
-        public void Controller(byte index);
+        public void Camera2DMovement(byte index);
     }
 }
