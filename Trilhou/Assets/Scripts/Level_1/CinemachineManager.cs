@@ -20,6 +20,7 @@ namespace Timoteo {
             setenceIndex = DialogueManager.Instance.SentenceIndex;
             cameraController = GetComponent<ICameraController>();
             CameraController();
+            
         }
 
         void CameraController()

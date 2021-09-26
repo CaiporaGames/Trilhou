@@ -21,7 +21,7 @@ namespace Timoteo
         public static DialogueManager Instance { get { return _instance; } }
 
         public delegate void nextDialogueDelegate();
-        public static nextDialogueDelegate NextDialogueDelegate;
+        public static nextDialogueDelegate NextDialogueDelegate;//it is called everytime the player press the next button
 
         private void Awake()
         {

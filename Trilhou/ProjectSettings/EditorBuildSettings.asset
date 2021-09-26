@@ -9,6 +9,15 @@ EditorBuildSettings:
     path: Assets/Scenes/Level_1/1_Introduction.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
+    path: Assets/Scenes/Level_1/2_Introduction.unity
+    guid: c51423815f827554f8ac51e345fd147f
+  - enabled: 1
+    path: Assets/Scenes/Level_1/3_Introcution.unity
+    guid: 22e289d28082b9b4caaeeea6cf531d40
+  - enabled: 1
+    path: Assets/Scenes/Level_1/4-Introduction.unity
+    guid: 06f3e5e709cc83246802faba70478a63
+  - enabled: 1
     path: Assets/Scenes/Level_1/QuartoEscuro.unity
     guid: 6aec3077bf907264883607df5951db26
   m_configObjects: {}
