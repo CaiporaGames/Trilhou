@@ -34,9 +34,15 @@ namespace Timoteo
             if (objectsCount.objectsCount == 7)
             {
                 PointsBar.Instance.AddPointsToBar();
-                Debug.Log("Won");
+                StartCoroutine(DelayToNextLevel());
             }
             Destroy(this, 4);
+        }
+
+        IEnumerator DelayToNextLevel()
+        {
+            yield return new WaitForSeconds(2);
+            NextLevelManagerWithoutIndice.Instance.NextLevel();
         }
     }
 }
