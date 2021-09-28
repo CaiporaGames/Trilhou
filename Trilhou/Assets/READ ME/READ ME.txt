@@ -59,6 +59,16 @@ Dialogue. Um novo asset sera criado. Renome-o. -> Click no seu novo asset -> ape
        regioes que estao na hieraquia. So ativar/desativar o que precisar
 
 
+                            ### Como usar roundeffect###
+- Arraste o roundEfecctCanvas para a hieracquia
+- Crie um manager e coloque o nextscenemanager script
+- Crie dois pointos, um no meio do canvas e outro no lado esquerdo. Caso voce queira que o movimento comece
+      pelo outro lado, entao coloque o segundo point na direita.
+- No canvas, va em nextBTN e use a funcao nextLevel method that are on the nextscenemanager script
+- No caso de fases que nao usem o index para passar voce tem que implementar o chamado dos metodos que estao 
+      no nextSceneManager script
+
+
 
 #################### Assets Credits ##################
   Asset name: Simple 64x64 brick.
@@ -76,3 +86,15 @@ Dialogue. Um novo asset sera criado. Renome-o. -> Click no seu novo asset -> ape
   Asset name: Forest Background Art
   Attribution: Tamara Ramsay http://vectorgurl.com/
   Licence: CC-BY-SA 3.0
+
+  ------
+
+  Asset name: shadydave__expressions-of-the-mind-piano-loop
+  Attribution: ShadyDave https://freesound.org/people/ShadyDave/sounds/325647/
+  Licence: (CC BY-NC 3.0)
+
+   ------
+
+  Asset name: Dramatic Dreamers Atmosphere Movie Film Cinematic Free Music Music Box
+  Attribution: DaveJf https://freesound.org/people/DaveJf/sounds/584901/
+  Licence: (CC BY-NC 3.0)
