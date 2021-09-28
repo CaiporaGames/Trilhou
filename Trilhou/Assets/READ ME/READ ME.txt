@@ -86,3 +86,15 @@ Dialogue. Um novo asset sera criado. Renome-o. -> Click no seu novo asset -> ape
   Asset name: Forest Background Art
   Attribution: Tamara Ramsay http://vectorgurl.com/
   Licence: CC-BY-SA 3.0
+
+  ------
+
+  Asset name: shadydave__expressions-of-the-mind-piano-loop
+  Attribution: ShadyDave https://freesound.org/people/ShadyDave/sounds/325647/
+  Licence: (CC BY-NC 3.0)
+
+   ------
+
+  Asset name: Dramatic Dreamers Atmosphere Movie Film Cinematic Free Music Music Box
+  Attribution: DaveJf https://freesound.org/people/DaveJf/sounds/584901/
+  Licence: (CC BY-NC 3.0)

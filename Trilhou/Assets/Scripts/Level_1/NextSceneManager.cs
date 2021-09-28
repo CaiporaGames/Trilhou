@@ -35,6 +35,6 @@ namespace Timoteo {
         public void LoadLevel()
         {
              SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
-        }
+        }       
     }
 }

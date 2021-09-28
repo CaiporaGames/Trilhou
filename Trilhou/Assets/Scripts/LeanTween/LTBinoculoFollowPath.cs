@@ -26,23 +26,26 @@ namespace Timoteo
 
         private void Awake()
         {
-            LTRoundTransition.Instance.StartTransitionLoader(startPosition.position, middlePosition.position, transitionTime);
+           // LTRoundTransition.Instance.StartTransitionLoader(startPosition.position, middlePosition.position, transitionTime);
 
         }
         // Start is called before the first frame update
         void Start()
         {
-            LeanTween.move(gameObject, nextPosition[i++], time).setDelay(delay).setOnComplete(Start);
             if (i == nextPosition.Length)
             {
                 LTRoundTransition.Instance.EndTransitionLoader(LoadLevel, startPosition.position, middlePosition.position, transitionTime);
+               return;
             }
+            LeanTween.move(gameObject, nextPosition[i], time).setDelay(delay).setOnComplete(Start);
+           
             if (i == 4)
             {
                 delay = 0;
                 time = time - 2;
             }
-        }
+            i++;
+        }      
 
         public void LoadLevel()
         {

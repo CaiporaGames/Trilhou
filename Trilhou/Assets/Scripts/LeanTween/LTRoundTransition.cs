@@ -33,7 +33,7 @@ namespace Timoteo
         public void EndTransitionLoader(System.Action m, Vector3 startPosition, Vector3 middlePosition, float time)
         {
             LeanTween.move(gameObject, startPosition, 0);
-            LeanTween.move(gameObject, middlePosition, time).setOnComplete(m);
+            LeanTween.move(gameObject, middlePosition, time).setDelay(3).setOnComplete(m);
         }
     }
 }
