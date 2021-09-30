@@ -12,17 +12,13 @@ namespace Timoteo
         [SerializeField] float maxPoints = 10;
         [SerializeField] float lerpSpeed;
 
-<<<<<<< HEAD
         static PointsBar instance;
         public static PointsBar Instance { get { return instance; } }
 
-=======
->>>>>>> parent of e16a5a9 (excluir assets)
         AudioSource audioSource;
         float points = 0;
         int imageIndex;
 
-<<<<<<< HEAD
         private void Awake()
         {
             if (instance != null && instance != this)
@@ -35,8 +31,6 @@ namespace Timoteo
             }
         }
 
-=======
->>>>>>> parent of e16a5a9 (excluir assets)
         private void Start()
         {
             audioSource = GetComponent<AudioSource>();
@@ -58,11 +52,7 @@ namespace Timoteo
             }
         }
 
-<<<<<<< HEAD
-        public void AddPointsToBar()//this will add a point on the points bar.
-=======
         public void AddToPointsBar()//this will add a point on the points bar.
->>>>>>> parent of e16a5a9 (excluir assets)
         {
             Image image = images[imageIndex].GetComponent<Image>();
             Color imageColor = image.color;
