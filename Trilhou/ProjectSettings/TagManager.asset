@@ -4,7 +4,16 @@
 TagManager:
   serializedVersion: 2
   tags:
+<<<<<<< Updated upstream
   - TutorialRequirement
+=======
+  - FxTemporaire
+  - Shelf
+  - PartyBaloon
+  - Ground
+  - Window
+  - Floor
+>>>>>>> Stashed changes
   layers:
   - Default
   - TransparentFX
@@ -12,7 +21,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Ballons
   - 
   - 
   - 
