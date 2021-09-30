@@ -1,37 +1,39 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class baloes : MonoBehaviour
+namespace Fernando
 {
-    private Rigidbody BalaoRig;
-    public int Speed;
-    
-    // Start is called before the first frame update
-    void Start()
+    public class baloes : MonoBehaviour
     {
-        BalaoRig = GetComponent<Rigidbody>();
-        
-    }
+        private Rigidbody BalaoRig;
+        public int Speed;
 
-    // Update is called once per frame
-    void Update()
-    {
-        if (Input.GetKey(KeyCode.W))
+        // Start is called before the first frame update
+        void Start()
         {
-            BalaoRig.AddForce(transform.forward * Speed * Time.deltaTime, ForceMode.Impulse);
+            BalaoRig = GetComponent<Rigidbody>();
+
         }
-        if (Input.GetKey(KeyCode.S))
+
+        // Update is called once per frame
+        void Update()
         {
-            BalaoRig.AddForce(transform.forward * -Speed * Time.deltaTime, ForceMode.Impulse);
-        }
-        if (Input.GetKey(KeyCode.A))
-        {
-            BalaoRig.AddForce(transform.forward * Speed * Time.deltaTime, ForceMode.Impulse);
-        }
-        if (Input.GetKey(KeyCode.D))
-        {
-            BalaoRig.AddForce(transform.forward * Speed * Time.deltaTime, ForceMode.Impulse);
+            if (Input.GetKey(KeyCode.W))
+            {
+                BalaoRig.AddForce(transform.forward * Speed * Time.deltaTime, ForceMode.Impulse);
+            }
+            if (Input.GetKey(KeyCode.S))
+            {
+                BalaoRig.AddForce(transform.forward * -Speed * Time.deltaTime, ForceMode.Impulse);
+            }
+            if (Input.GetKey(KeyCode.A))
+            {
+                BalaoRig.AddForce(transform.forward * Speed * Time.deltaTime, ForceMode.Impulse);
+            }
+            if (Input.GetKey(KeyCode.D))
+            {
+                BalaoRig.AddForce(transform.forward * Speed * Time.deltaTime, ForceMode.Impulse);
+            }
         }
     }
 }

@@ -1,24 +1,26 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class operadores : MonoBehaviour
+namespace Fernando
 {
-    // Start is called before the first frame update
-    int num1, num2, num3, resultado;
-
-    void Start()
+    public class operadores : MonoBehaviour
     {
-        num1 = 10;
-        num2 = 2;
-        num3 = 5;
-        resultado = num1++ + num2++ * num3--;
-    }
+        // Start is called before the first frame update
+        int num1, num2, num3, resultado;
 
-    // Update is called once per frame
-    void Update()
-    {
-        //resultado = num1++ + num2++ + num3--;
-        print(resultado);
+        void Start()
+        {
+            num1 = 10;
+            num2 = 2;
+            num3 = 5;
+            resultado = num1++ + num2++ * num3--;
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            //resultado = num1++ + num2++ + num3--;
+            print(resultado);
+        }
     }
 }
