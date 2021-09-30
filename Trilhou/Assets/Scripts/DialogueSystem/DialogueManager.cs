@@ -13,8 +13,27 @@ namespace Timoteo
         [SerializeField] TMP_Text dialogueText;//this holds the text component 
 
         [Tooltip("This holds the current sentence index on the sentences string list")]
-        public int setenceIndex;
+        public byte setenceIndex;
 
+        public byte SentenceIndex { get { return setenceIndex; } }
+
+        static DialogueManager _instance;
+        public static DialogueManager Instance { get { return _instance; } }
+
+        public delegate void nextDialogueDelegate();
+        public static nextDialogueDelegate NextDialogueDelegate;//it is called everytime the player press the next button
+
+        private void Awake()
+        {
+            if (_instance != null && _instance != this)
+            {
+                Destroy(gameObject);
+            }
+            else
+            {
+                _instance = this;
+            }
+        }
         private void Start()
         {
             DisplayDialogue(0);
@@ -31,6 +50,7 @@ namespace Timoteo
             if (setenceIndex < dialogues.setences.Length - 1)
             {
                 setenceIndex++;
+                NextDialogueDelegate?.Invoke();
                 DisplayDialogue(setenceIndex);
             }
         }
