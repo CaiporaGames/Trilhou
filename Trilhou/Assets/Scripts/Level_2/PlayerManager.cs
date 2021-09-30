@@ -24,6 +24,8 @@ namespace Paulo
         private void OnTriggerEnter2D(Collider2D collision)
         {
 
+            Debug.Log("oieee");
+
             if (collision.gameObject.tag == "Obstruction" && isPlaying)
             {
                 this.gameObject.SendMessageUpwards("WrongCollision");
