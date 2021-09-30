@@ -6,11 +6,12 @@ TagManager:
   tags:
   - Shelf
   - StudyGroup
+  - TutorialRequirement
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - Goggles
+  - 
   - Water
   - UI
   - 

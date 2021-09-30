@@ -1,0 +1,104 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4622609942710162300
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4622609942710162298}
+  - component: {fileID: 4622609942710162299}
+  - component: {fileID: 4622609942710162297}
+  m_Layer: 0
+  m_Name: CinemachineManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4622609942710162298
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4622609942710162300}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4622609942710162299
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4622609942710162300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dff71d929f51cd64f9fb36d080e81d48, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &4622609942710162297
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4622609942710162300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6d8ce1cd0eb00fe4abd8eed77feb3fe6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Positions:
+  - startPoint: {fileID: 0}
+    endPoint: {fileID: 0}
+    index: 0
+    A: {fileID: 0}
+    B: {fileID: 0}
+    time: 15
+    zoomBeggining: 2
+    zoomEnding: 5
+    zoomOut: 1
+  - startPoint: {fileID: 0}
+    endPoint: {fileID: 0}
+    index: 2
+    A: {fileID: 0}
+    B: {fileID: 0}
+    time: 15
+    zoomBeggining: 2
+    zoomEnding: 5
+    zoomOut: 1
+  - startPoint: {fileID: 0}
+    endPoint: {fileID: 0}
+    index: 5
+    A: {fileID: 0}
+    B: {fileID: 0}
+    time: 15
+    zoomBeggining: 5
+    zoomEnding: 2
+    zoomOut: 0
+  - startPoint: {fileID: 0}
+    endPoint: {fileID: 0}
+    index: 7
+    A: {fileID: 0}
+    B: {fileID: 0}
+    time: 15
+    zoomBeggining: 5
+    zoomEnding: 2
+    zoomOut: 0
+  - startPoint: {fileID: 0}
+    endPoint: {fileID: 0}
+    index: 11
+    A: {fileID: 0}
+    B: {fileID: 0}
+    time: 5
+    zoomBeggining: 5
+    zoomEnding: 2
+    zoomOut: 0

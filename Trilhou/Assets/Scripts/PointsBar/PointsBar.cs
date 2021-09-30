@@ -12,9 +12,24 @@ namespace Timoteo
         [SerializeField] float maxPoints = 10;
         [SerializeField] float lerpSpeed;
 
+        static PointsBar instance;
+        public static PointsBar Instance { get { return instance; } }
+
         AudioSource audioSource;
         float points = 0;
         int imageIndex;
+
+        private void Awake()
+        {
+            if (instance != null && instance != this)
+            {
+                Destroy(this);
+            }
+            else
+            {
+                instance = this;
+            }
+        }
 
         private void Start()
         {
@@ -37,7 +52,7 @@ namespace Timoteo
             }
         }
 
-        public void AddToPointsBar()//this will add a point on the points bar.
+        public void AddPointsToBar()//this will add a point on the points bar.
         {
             Image image = images[imageIndex].GetComponent<Image>();
             Color imageColor = image.color;
