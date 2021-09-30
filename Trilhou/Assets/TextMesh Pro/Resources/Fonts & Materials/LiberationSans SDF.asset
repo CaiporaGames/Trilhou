@@ -48,7 +48,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2846298}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -96,7 +96,7 @@ Material:
     - _Reflectivity: 10
     - _ScaleRatioA: 0.9
     - _ScaleRatioB: 0.73125
-    - _ScaleRatioC: 0.55125
+    - _ScaleRatioC: 0.73125
     - _ScaleX: 1
     - _ScaleY: 1
     - _ShaderFlags: 0
@@ -148,7 +148,8 @@ MonoBehaviour:
   materialHashCode: 198912371
   m_Version: 1.1.0
   m_SourceFontFileGUID: e3265ab4bf004d28a9537516768c1c75
-  m_SourceFontFile_EditorRef: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75, type: 3}
+  m_SourceFontFile_EditorRef: {fileID: 12800000, guid: e3265ab4bf004d28a9537516768c1c75,
+    type: 3}
   m_SourceFontFile: {fileID: 0}
   m_AtlasPopulationMode: 0
   m_FaceInfo:
@@ -160,7 +161,7 @@ MonoBehaviour:
     m_LineHeight: 98.90625
     m_AscentLine: 77.84375
     m_CapLine: 59.1875
-    m_MeanLine: 0
+    m_MeanLine: 45.4375
     m_Baseline: 0
     m_DescentLine: -18.21875
     m_SuperscriptOffset: 77.84375
@@ -4675,7 +4676,7 @@ MonoBehaviour:
     m_GlyphIndex: 250
     m_Scale: 1
   m_AtlasTextures:
-  - {fileID: 2846298}
+  - {fileID: 0}
   m_AtlasTextureIndex: 0
   m_IsMultiAtlasTexturesEnabled: 0
   m_ClearDynamicDataOnBuild: 0
@@ -6215,7 +6216,7 @@ MonoBehaviour:
     Padding: 9
     AtlasWidth: 1024
     AtlasHeight: 1024
-  atlas: {fileID: 2846298}
+  atlas: {fileID: 0}
   m_AtlasWidth: 1024
   m_AtlasHeight: 1024
   m_AtlasPadding: 9
