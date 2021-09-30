@@ -184,6 +184,7 @@ GameObject:
   - component: {fileID: 7002386996731932840}
   - component: {fileID: 5287899643984957868}
   - component: {fileID: 7430326507721164992}
+  - component: {fileID: 6185512157999677278}
   m_Layer: 0
   m_Name: Shelfs
   m_TagString: Shelf
@@ -277,6 +278,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   secao: {fileID: 1486607197483060753}
+--- !u!114 &6185512157999677278
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7457749314142794300}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf45058dd84ef0e40a781c07dc041525, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  book: {fileID: 4012194530510964292, guid: d06ae2bad150a8842a925035db283451, type: 3}
 --- !u!1 &7457749314709714984
 GameObject:
   m_ObjectHideFlags: 0

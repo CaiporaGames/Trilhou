@@ -2,15 +2,19 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class TweenTimer : MonoBehaviour
+
+namespace Paulo
 {
-    [SerializeField] private float tweenTime;
-    public void Tween()
+    public class TweenTimer : MonoBehaviour
     {
-        LeanTween.cancel(gameObject);
+        [SerializeField] private float tweenTime;
+        public void Tween()
+        {
+            LeanTween.cancel(gameObject);
 
-        gameObject.transform.localScale = Vector3.one;
+            gameObject.transform.localScale = Vector3.one;
 
-        LeanTween.scale(gameObject, Vector3.one * 1.5f, tweenTime).setEasePunch();
+            LeanTween.scale(gameObject, Vector3.one * 1.5f, tweenTime).setEasePunch();
+        }
     }
 }
