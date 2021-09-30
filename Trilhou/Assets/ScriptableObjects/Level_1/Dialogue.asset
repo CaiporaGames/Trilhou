@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e4e81c534a8f941b0a885a12ff1e3c, type: 3}
+  m_Name: Dialogue
+  m_EditorClassIdentifier: 
+  setences:
+  - setences: "Ol\xE1, eu sou a Maria Livr\xE3o."
+    names: "Maria Livr\xE3o"
+  - setences: 'Agora mesmo vou entrar no meu celular para poder encontrar um novo
+      desafio.
+
+      Vem comigo!'
+    names: "Maria Livr\xE3o"
+  - setences: Eu sou uma menina aventureira que viaja pelo mundo fazendo descobertas.
+    names: "Maria Livr\xE3o"
+  - setences: "Ser\xE1 que se eu fizer uma pesquisa tamb\xE9m vou me sentir diferente?"
+    names: "Maria Livr\xE3o"
+  - setences: E como se faz pesquisa?
+    names: "Maria Livr\xE3o"
+  - setences: Vamos descobrir juntos?
+    names: "Maria Livr\xE3o"
