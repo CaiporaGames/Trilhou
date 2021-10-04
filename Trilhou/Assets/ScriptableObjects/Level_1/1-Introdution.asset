@@ -24,7 +24,7 @@ MonoBehaviour:
       Uns meninos sairam da biblioteca
       super felizes.'
     names: "Maria Livr\xE3o"
-  - setences: Parece que eles estavam fazendo uma tal de <color=green>pesquisa</color>...
+  - setences: Parece que eles estavam fazendo uma tal de <color=red>pesquisa</color>...
     names: "Maria Livr\xE3o"
   - setences: "O que ser\xE1 uma pesquisa?"
     names: "Maria Livr\xE3o"
