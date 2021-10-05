@@ -7,8 +7,10 @@ public class BalloonSpawner : MonoBehaviour
     [SerializeField] GameObject[] points;
     [SerializeField] GameObject balloon;
     [SerializeField] float maxTimeBetweenBalloons;
+    [SerializeField] SOGeneralVariables variables;
 
     float timeBetweenBalloons;
+
 
     private void Start()
     {
@@ -19,7 +21,10 @@ public class BalloonSpawner : MonoBehaviour
     private void Update()
     {
         timeBetweenBalloons -= Time.deltaTime;
-        SpawnObjects();
+        if (!variables.gamePaused)
+        {
+            SpawnObjects();
+        }
     }
 
     void SpawnObjects()
@@ -33,5 +38,10 @@ public class BalloonSpawner : MonoBehaviour
                 Instantiate(balloon, points[i].transform.position, Quaternion.identity);
             }
         }
+    }
+
+    public void UnpauseGame()
+    {
+        variables.gamePaused = true;
     }
 }

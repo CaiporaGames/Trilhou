@@ -15,6 +15,7 @@ namespace Timoteo
         [SerializeField] float maxTimerBetweenIdleAnimation = 15;
         [Tooltip("The character can walk in 2 dimensions? If YES: Mark the box!")]
         [SerializeField] bool is2D = true;
+        [SerializeField] SOGeneralVariables variables;
 
 
         //   [Private Variables]
@@ -49,118 +50,130 @@ namespace Timoteo
 
         void Movement()
         {
-            x = Input.GetAxis("Horizontal");
-           
-
-            if (is2D)
+            if (!variables.gamePaused)
             {
-                y = Input.GetAxis("Vertical");
-            }
+                x = Input.GetAxis("Horizontal");
+
+                if (is2D)
+                {
+                    y = Input.GetAxis("Vertical");
+                }
 
 
-            if (!is2D)
-            {
-                movement = new Vector3(speed.x * x, 0, 0);
+                if (!is2D)
+                {
+                    movement = new Vector3(speed.x * x, 0, 0);
+                }
+                else
+                {
+                    movement = new Vector3(speed.x * x, speed.y * y, 0);
+                }
+
+                movement *= Time.deltaTime;
+
+                transform.Translate(movement);
+
+                if ((x > 0 && y > 0 || x < 0 && y > 0) && is2D)
+                {
+
+                    animator.SetBool("backwalk", true);
+                    animator.SetBool("frontwalk", false);
+                    animator.SetBool("leftwalk", false);
+                    animator.SetBool("rightwalk", false);
+
+                    animator.SetBool("idle1", false);
+                    animator.SetBool("idle2", false);
+
+
+                }
+                else if ((x < 0 && y < 0 || x > 0 && y < 0) && is2D)
+                {
+                    animator.SetBool("backwalk", false);
+                    animator.SetBool("frontwalk", true);
+                    animator.SetBool("leftwalk", false);
+                    animator.SetBool("rightwalk", false);
+
+                    animator.SetBool("idle1", false);
+                    animator.SetBool("idle2", false);
+
+
+                }
+                else if (x > 0 && y == 0)
+                {
+                    animator.SetBool("backwalk", false);
+                    animator.SetBool("frontwalk", false);
+                    animator.SetBool("leftwalk", true);
+                    animator.SetBool("rightwalk", false);
+
+                    animator.SetBool("idle1", false);
+                    animator.SetBool("idle2", false);
+
+
+                }
+                else if (x < 0 && y == 0)
+                {
+                    animator.SetBool("backwalk", false);
+                    animator.SetBool("frontwalk", false);
+                    animator.SetBool("leftwalk", false);
+                    animator.SetBool("rightwalk", true);
+
+                    animator.SetBool("idle1", false);
+                    animator.SetBool("idle2", false);
+
+
+                }
+                else if (x == 0 && y > 0 && is2D)
+                {
+                    animator.SetBool("backwalk", true);
+                    animator.SetBool("frontwalk", false);
+                    animator.SetBool("leftwalk", false);
+                    animator.SetBool("rightwalk", false);
+
+                    animator.SetBool("idle1", false);
+                    animator.SetBool("idle2", false);
+
+
+                }
+                else if (x == 0 && y < 0 && is2D)
+                {
+                    animator.SetBool("backwalk", false);
+                    animator.SetBool("frontwalk", true);
+                    animator.SetBool("leftwalk", false);
+                    animator.SetBool("rightwalk", false);
+
+                    animator.SetBool("idle1", false);
+                    animator.SetBool("idle2", false);
+
+                }
+                else if (x == 0 && y == 0)
+                {
+                    animator.SetBool("backwalk", false);
+                    animator.SetBool("frontwalk", false);
+                    animator.SetBool("leftwalk", false);
+                    animator.SetBool("rightwalk", false);
+
+
+                    if (timerBetweenIdleAnimation <= 0)
+                    {
+                        animator.SetBool("idle1", false);
+                        animator.SetBool("idle2", true);
+                        StartCoroutine(AnimationTimer(2.4f));
+                    }
+                    else
+                    {
+                        animator.SetBool("idle1", true);
+                    }
+                }
             }
             else
-            {               
-               movement = new Vector3(speed.x * x, speed.y * y, 0);                
-            }
-
-            movement *= Time.deltaTime;
-
-            transform.Translate(movement);
-
-            if ((x > 0 && y > 0 || x < 0 && y > 0) && is2D)
-            {
-
-                animator.SetBool("backwalk", true);
-                animator.SetBool("frontwalk", false);
-                animator.SetBool("leftwalk", false);
-                animator.SetBool("rightwalk", false);
-
-                animator.SetBool("idle1", false);
-                animator.SetBool("idle2", false);
-
-
-            }
-            else if ((x < 0 && y < 0 || x > 0 && y < 0) && is2D)
-            {
-                animator.SetBool("backwalk", false);
-                animator.SetBool("frontwalk", true);
-                animator.SetBool("leftwalk", false);
-                animator.SetBool("rightwalk", false);
-
-                animator.SetBool("idle1", false);
-                animator.SetBool("idle2", false);
-
-
-            }
-            else if (x > 0 && y == 0)
-            {
-                animator.SetBool("backwalk", false);
-                animator.SetBool("frontwalk", false);
-                animator.SetBool("leftwalk", true);
-                animator.SetBool("rightwalk", false);
-
-                animator.SetBool("idle1", false);
-                animator.SetBool("idle2", false);
-
-
-            }
-            else if (x < 0 && y == 0)
-            {
-                animator.SetBool("backwalk", false);
-                animator.SetBool("frontwalk", false);
-                animator.SetBool("leftwalk", false);
-                animator.SetBool("rightwalk", true);
-
-                animator.SetBool("idle1", false);
-                animator.SetBool("idle2", false);
-
-
-            }
-            else if (x == 0 && y > 0 && is2D)
-            {
-                animator.SetBool("backwalk", true);
-                animator.SetBool("frontwalk", false);
-                animator.SetBool("leftwalk", false);
-                animator.SetBool("rightwalk", false);
-
-                animator.SetBool("idle1", false);
-                animator.SetBool("idle2", false);
-
-
-            }
-            else if (x == 0 && y < 0 && is2D)
-            {
-                animator.SetBool("backwalk", false);
-                animator.SetBool("frontwalk", true);
-                animator.SetBool("leftwalk", false);
-                animator.SetBool("rightwalk", false);
-
-                animator.SetBool("idle1", false);
-                animator.SetBool("idle2", false);
-
-            }
-            else if (x == 0 && y == 0)
             {
                 animator.SetBool("backwalk", false);
                 animator.SetBool("frontwalk", false);
                 animator.SetBool("leftwalk", false);
                 animator.SetBool("rightwalk", false);
+                animator.SetBool("idle1", true);
+                animator.SetBool("idle2", false);
 
-
-               if (timerBetweenIdleAnimation <= 0)
-               {
-                    animator.SetBool("idle1", false);
-                    animator.SetBool("idle2",true);
-                    StartCoroutine(AnimationTimer(2.4f));
-               }
-               else
-               {
-                    animator.SetBool("idle1", true);
-               }
             }
         }
 

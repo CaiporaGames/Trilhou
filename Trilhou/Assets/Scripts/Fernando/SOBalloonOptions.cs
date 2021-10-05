@@ -11,5 +11,12 @@ public class SOBalloonOptions : ScriptableObject
     public void RemoveFromList(string name)
     {
         ballonOptions.Remove(name);
+        Debug.Log(ballonOptions.Count);
+    }
+
+    private void OnDisable()
+    {
+        ballonOptions[0] = "Quando?";
+        ballonOptions[1] = "Onde?";
     }
 }
