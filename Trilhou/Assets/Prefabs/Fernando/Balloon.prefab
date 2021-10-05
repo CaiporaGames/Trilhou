@@ -10,6 +10,9 @@ GameObject:
   m_Component:
   - component: {fileID: 2516033458627284695}
   - component: {fileID: 2516033458627284692}
+  - component: {fileID: 8422895000249909446}
+  - component: {fileID: 8801333420831963958}
+  - component: {fileID: 6576733493268071751}
   m_Layer: 0
   m_Name: Ballon
   m_TagString: Untagged
@@ -82,6 +85,58 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!50 &8422895000249909446
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2516033458627284694}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
+--- !u!58 &8801333420831963958
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2516033458627284694}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.06452501, y: 0.100026965}
+  serializedVersion: 2
+  m_Radius: 0.92344546
+--- !u!114 &6576733493268071751
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2516033458627284694}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7516d44fcc4d14946a357ff17041cb61, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionEffect: {fileID: 100004, guid: f95ff734540a0d749be6571b6cb5b37f, type: 3}
+  options: {fileID: 11400000, guid: 98b43f9c07d336c449b2c7a337744cb3, type: 2}
+  chance: 0.15
 --- !u!1 &2516033458946686860
 GameObject:
   m_ObjectHideFlags: 0
@@ -91,9 +146,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2516033458946686861}
-  - component: {fileID: 2516033458946686858}
   - component: {fileID: 2516033458946686859}
-  - component: {fileID: 2516033458946686856}
   m_Layer: 0
   m_Name: Balloon
   m_TagString: Untagged
@@ -116,22 +169,6 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!58 &2516033458946686858
-CircleCollider2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2516033458946686860}
-  m_Enabled: 1
-  m_Density: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_UsedByEffector: 0
-  m_UsedByComposite: 0
-  m_Offset: {x: 0.06452501, y: 0.100026965}
-  serializedVersion: 2
-  m_Radius: 0.92344546
 --- !u!114 &2516033458946686859
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,8 +203,8 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 0.18176031
     - serializedVersion: 3
-      time: 0.555473
-      value: 0.8234571
+      time: 0.57219666
+      value: 0.31401956
       inSlope: 0.0689225
       outSlope: 0.0689225
       tangentMode: 0
@@ -175,13 +212,13 @@ MonoBehaviour:
       inWeight: 0.33333334
       outWeight: 1
     - serializedVersion: 3
-      time: 0.6281378
-      value: 0.6867937
-      inSlope: -6.661796
-      outSlope: -6.661796
+      time: 0.7150824
+      value: 0.29055345
+      inSlope: -0.5967554
+      outSlope: -0.5967554
       tangentMode: 0
       weightedMode: 0
-      inWeight: 0.33333334
+      inWeight: 0.53086615
       outWeight: 0.35853964
     - serializedVersion: 3
       time: 1
@@ -197,24 +234,3 @@ MonoBehaviour:
     m_RotationOrder: 4
   xtime: 5
   yPosition: -5
---- !u!50 &2516033458946686856
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2516033458946686860}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 1
-  m_Constraints: 0

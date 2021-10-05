@@ -13,40 +13,67 @@ namespace Timoteo
         [SerializeField] float jumpForce = 5f;
         [Tooltip("This timer is to play different idle animations")]
         [SerializeField] float maxTimerBetweenIdleAnimation = 15;
+        [Tooltip("The character can walk in 2 dimensions? If YES: Mark the box!")]
+        [SerializeField] bool is2D = true;
 
 
         //   [Private Variables]
         Animator animator;
         bool runOnce = true;
         float timerBetweenIdleAnimation;
-
+        bool canJump = true;
+        Rigidbody2D rb;
+        Vector3 movement;
+        float y;
+        float x;
 
         private void Start()
         {
-            animator = GetComponentInChildren<Animator>();          
+            animator = GetComponentInChildren<Animator>();
+            rb = GetComponentInChildren<Rigidbody2D>();
         }
 
         // Update is called once per frame
         void Update()
         {
             Movement();
+            Jump();
             timerBetweenIdleAnimation -= Time.deltaTime;
+        }
+
+        void IsGrounded()
+        {
+           
         }
 
 
         void Movement()
         {
-            float x = Input.GetAxis("Horizontal");
-            float y = Input.GetAxis("Vertical");
+            x = Input.GetAxis("Horizontal");
+           
 
-            Vector3 movement = new Vector3(speed.x * x, speed.y * y, 0);
+            if (is2D)
+            {
+                y = Input.GetAxis("Vertical");
+            }
+
+
+            if (!is2D)
+            {
+                movement = new Vector3(speed.x * x, 0, 0);
+            }
+            else
+            {               
+               movement = new Vector3(speed.x * x, speed.y * y, 0);                
+            }
 
             movement *= Time.deltaTime;
 
             transform.Translate(movement);
 
-            if (x > 0 && y > 0 || x < 0 && y > 0)
+            if ((x > 0 && y > 0 || x < 0 && y > 0) && is2D)
             {
+
                 animator.SetBool("backwalk", true);
                 animator.SetBool("frontwalk", false);
                 animator.SetBool("leftwalk", false);
@@ -57,7 +84,7 @@ namespace Timoteo
 
 
             }
-            else if (x < 0 && y < 0 || x > 0 && y < 0)
+            else if ((x < 0 && y < 0 || x > 0 && y < 0) && is2D)
             {
                 animator.SetBool("backwalk", false);
                 animator.SetBool("frontwalk", true);
@@ -93,7 +120,7 @@ namespace Timoteo
 
 
             }
-            else if (x == 0 && y > 0)
+            else if (x == 0 && y > 0 && is2D)
             {
                 animator.SetBool("backwalk", true);
                 animator.SetBool("frontwalk", false);
@@ -105,7 +132,7 @@ namespace Timoteo
 
 
             }
-            else if (x == 0 && y < 0)
+            else if (x == 0 && y < 0 && is2D)
             {
                 animator.SetBool("backwalk", false);
                 animator.SetBool("frontwalk", true);
@@ -134,6 +161,14 @@ namespace Timoteo
                {
                     animator.SetBool("idle1", true);
                }
+            }
+        }
+
+        void Jump()
+        {
+            if (Input.GetKeyDown(KeyCode.Space) && canJump)
+            {
+                rb.AddForce(Vector2.up * Time.deltaTime * jumpForce, ForceMode2D.Impulse);
             }
         }
 

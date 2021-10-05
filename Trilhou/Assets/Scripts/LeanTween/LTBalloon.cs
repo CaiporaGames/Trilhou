@@ -22,7 +22,7 @@ public class LTBalloon : MonoBehaviour
     {
         int delay = Random.Range(0,4);
         int randomX = Random.Range(-5, 6);
-        float ytime = Random.Range(5, 20);
+        float ytime = Random.Range(4, 7);
         LeanTween.moveY(gameObject, yPosition, ytime).setEase(curve).setDelay(delay);
         LeanTween.moveX(gameObject, randomX, xtime).setEase(curve).setLoopPingPong();
     }
@@ -80,11 +80,5 @@ public class LTBalloon : MonoBehaviour
         }
     }
    
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("ground"))
-        {
-            Destroy(gameObject);
-        }
-    }
+   
 }
