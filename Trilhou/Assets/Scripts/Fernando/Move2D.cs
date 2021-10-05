@@ -3,9 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 namespace Fernando
 {
-
-
-    public class Move2D : MonoBehaviour
+        public class Move2D : MonoBehaviour
     {
         // Start is called before the first frame update
         public Rigidbody2D rb;

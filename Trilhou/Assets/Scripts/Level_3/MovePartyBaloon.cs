@@ -2,28 +2,33 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MovePartyBaloon : MonoBehaviour
+namespace Fernando
 {
-    public float vel = 2.5f;
 
-    // Start is called before the first frame update
-    void Start()
+    public class MovePartyBaloon : MonoBehaviour
     {
-        
-    }
+        public float vel = 2.5f;
 
-    // Update is called once per frame
-    void Update()
-    {
-        transform.Translate(new Vector2(vel * Time.deltaTime, 0));
-        
-    }
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Floor"))
+        // Start is called before the first frame update
+        void Start()
         {
-            Destroy(collision.gameObject);
-            
+
+        }
+
+        // Update is called once per frame
+        void Update()
+        {
+            transform.Translate(new Vector2(vel * Time.deltaTime, 0));
+
+        }
+        private void OnCollisionEnter2D(Collision2D collision)
+        {
+            if (collision.gameObject.CompareTag("Floor"))
+            {
+                Destroy(collision.gameObject);
+
+            }
         }
     }
+
 }

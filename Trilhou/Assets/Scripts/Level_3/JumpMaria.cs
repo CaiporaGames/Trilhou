@@ -8,10 +8,10 @@ namespace Fernando
 
     public class JumpMaria : MonoBehaviour
     {
-        public float force = 800f;
+        public float force = 80f;
         public Rigidbody2D player;
         public bool goJump = false;
-        public int jumpDouble = 3;
+        public int jumpDouble = 2;
         public int displayText = 1;
         public GameObject baloon;
         public GameObject window;
