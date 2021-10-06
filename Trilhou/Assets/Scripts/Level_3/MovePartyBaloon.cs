@@ -25,7 +25,7 @@ namespace Fernando
         {
             if (collision.gameObject.CompareTag("Floor"))
             {
-                Destroy(collision.gameObject);
+                Destroy(transform.gameObject);
 
             }
         }

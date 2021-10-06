@@ -24,6 +24,7 @@ namespace Fernando
             facingLeft.x = facingLeft.x * -1;
 
             rb = GetComponent<Rigidbody2D>();
+
         }
 
         // Update is called once per frame
@@ -33,7 +34,7 @@ namespace Fernando
 
             if (Input.GetButtonDown("Jump") && inFloor == true)
             {
-                rb.velocity = Vector2.up * 12;
+                rb.velocity = Vector2.up * 20;
             }
 
             direction = Input.GetAxis("Horizontal");
