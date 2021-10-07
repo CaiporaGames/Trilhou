@@ -55,7 +55,6 @@ namespace Paulo
                 {
                     StopPlaying();
                     LoseFeedBack();
-                    Debug.Log("perdeu");
                 }
             }
         }
@@ -63,10 +62,13 @@ namespace Paulo
         //Inicia o Timer da partida.
         private void StartPlaying()
         {
+            life = maxLife;
             timerController.VisualFeedBack("Começouu!!");
             timerController.BeginTimer();
+            timerController.SetScore(life);
             studyGroup.StartPlaying(colors2);
             isPlaying = true;
+         
             //StartMoveObjetcs(); move os npcs pelo mapa 
         }
 
@@ -102,6 +104,9 @@ namespace Paulo
         private void IncrementCounter()
         {
             score += 1;
+            if (life < maxLife) {
+                life += 1;
+            }
             //timerController.SetScore(score);
         }
 
@@ -141,6 +146,9 @@ namespace Paulo
             GameObject shelf = FindGuideShelf(bookColor);
             shelf.transform.GetChild(0).gameObject.GetComponent<ShelfsManager>().CreateBook();
             windowPointer.Show(shelf.transform.position);
+            studyGroup.NewRequest();
+            timerController.EndTimer();
+            timerController.BeginTimer();
         }
 
         //Encontra a instancia de estante que tem a cor correspondente ao livro
@@ -169,8 +177,7 @@ namespace Paulo
             //timerController.VisualFeedBack("Grupo Correto!!");
             IncrementCounter();
             timerController.PopUpBook(false);
-
-            timerController.BeginTimer();
+            timerController.SetScore(life);
 
             //animação para pontuação
             //efeito sonoro
@@ -181,6 +188,8 @@ namespace Paulo
         {
             soundManager.PlayWrongShelf();
             timerController.VisualFeedBack("Estante Incorreta!!");
+            life -= 1;
+            timerController.SetScore(life);
             //animação para erro
             //efeito sonoro
             //decrementa a vida da maria livrao ou decrementa a quantidade de acertos
@@ -198,6 +207,11 @@ namespace Paulo
         {
             //efeito sonoro
             timerController.VisualFeedBack("Não foi dessa vez");
-        }
+            //destroi o livro e zera variaveis
+            playerManager.DestroyBook();
+            windowPointer.Hide();
+            timerController.PopUpBook(false);
+            score = 0;
+    }
     }
 }

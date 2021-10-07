@@ -12,7 +12,6 @@ namespace Paulo {
         private bool activeRequest;
         private int indice;
 
-        [SerializeField] private float spawnRequestTime;
         [SerializeField] private float spawnRequestDelay;
         [SerializeField] private GameObject popUpRequest;
         [SerializeField] private Animator animator;
@@ -24,7 +23,6 @@ namespace Paulo {
         private void Start()
         {
             indice = Questions.Count;
-            Debug.Log(indice);
             isPlaying = false;
             popUpRequest.SetActive(false);
         }
@@ -38,7 +36,7 @@ namespace Paulo {
         public void StartPlaying(List<string> colors)
         {
             this.colors = colors;
-            InvokeRepeating("NewRequest", spawnRequestDelay, spawnRequestTime);
+            Invoke("NewRequest", spawnRequestDelay);
             isPlaying = true;
         }
         public void StopPlaying()
@@ -47,7 +45,7 @@ namespace Paulo {
             //detroi todos requests ativos
         }
 
-        private void NewRequest()
+        public void NewRequest()
         {
             //Instantiate(spawnee, transform.position, transform.rotation);
 
@@ -60,10 +58,9 @@ namespace Paulo {
                 int index = random.Next(colors.Count);
                 string color = colors[index];
                 request = color;
-                Debug.Log(request);
                 activeRequest = true;
                 PopUp();
-                popUpRequest.SetActive(false);
+                popUpRequest.SetActive(true);
             }
         }
 

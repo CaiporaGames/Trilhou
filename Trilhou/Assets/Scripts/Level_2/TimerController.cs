@@ -32,12 +32,13 @@ namespace Paulo
         {
             instance = this;
             miniatureBook.SetActive(false);
+            timerGoing = false;
         }
 
         private void Start()
         {
             tweenCounter = counter.gameObject.GetComponent<TweenText>();
-            timerGoing = false;
+            beforeTimer = 0;
         }
 
         private void Update()
@@ -49,35 +50,23 @@ namespace Paulo
             }
         }
         public void BeginTimer()
-        {
-            timeCounter.text = "Tempo: 00:00:00";
+        {  
+            timeCounter.gameObject.SetActive(true);
+            timeCounter.text = "00:00";
             timerGoing = true;
             elapsedTime = initialTime;
 
             StartCoroutine(UpdateTimer());
         }
 
-        public void BeginCounter()
-        {
-            counter.text = "0";
-        }
-
         public void EndTimer()
         {
+            beforeTimer = elapsedTime;
             timerGoing = false;
+            StopCoroutine(UpdateTimer());
             timeCounter.gameObject.SetActive(false);
         }
-        public void PauseTimer()
-        {
-            timerGoing = false;
-            beforeTimer = elapsedTime;
-
-        }
-        public void ContinueTimer()
-        {
-            elapsedTime = Time.deltaTime + (initialTime - beforeTimer);
-            timerGoing = true;
-        }
+         
         private IEnumerator UpdateTimer()
         {
             bool flag = true;
@@ -86,7 +75,7 @@ namespace Paulo
             {
                 elapsedTime = elapsedTime - Time.deltaTime;
                 timePlaying = TimeSpan.FromSeconds(elapsedTime);
-                string timePlayingStr = " " + timePlaying.ToString("mm':'ss'.'ff");
+                string timePlayingStr = " " + timePlaying.ToString(@"ss\:ff");
                 timeCounter.text = timePlayingStr;
                 if (flag && elapsedTime < 60 && elapsedTime > 30)
                 {
@@ -102,6 +91,7 @@ namespace Paulo
                 }
                 yield return null;
             }
+            StopCoroutine(UpdateTimer());
 
         }
 
@@ -125,9 +115,10 @@ namespace Paulo
         public void PopUpBook(bool active)
         {
             miniatureBook.gameObject.SetActive(active);
-            TweenText tweenBook = miniatureBook.GetComponent<TweenText>();
-            Debug.Log(tweenBook);
-            tweenBook.SendMessage("Tween");
+            if (active) {
+                TweenText tweenBook = miniatureBook.GetComponent<TweenText>();
+                tweenBook.SendMessage("Tween");
+            }
         }
     }
 }

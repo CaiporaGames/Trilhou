@@ -14,21 +14,23 @@ namespace Paulo
         private bool isPlaying;
         private string request;
         private bool activeRequest;
+        private bool timeOutCollision;
 
         private void Start()
         {
             this.isPlaying = false;
             this.hasBook = false;
-        }
+            this.timeOutCollision = false;
+    }
 
         private void OnTriggerEnter2D(Collider2D collision)
         {
 
-            Debug.Log("oieee");
-
-            if (collision.gameObject.tag == "Obstruction" && isPlaying)
+            if (collision.gameObject.tag == "Obstruction" && isPlaying && !timeOutCollision)
             {
                 this.gameObject.SendMessageUpwards("WrongCollision");
+                timeOutCollision = true;
+                Invoke("TimeOutCollision",2);
             }
 
             if (collision.gameObject.tag == "Shelf" && !hasBook && isPlaying)
@@ -45,7 +47,11 @@ namespace Paulo
                 }
                 else
                 {
-                    this.gameObject.SendMessageUpwards("WrongCollision");
+                    if (!timeOutCollision) {
+                        this.gameObject.SendMessageUpwards("WrongCollision");
+                        timeOutCollision = true;
+                        Invoke("TimeOutCollision", 2);
+                    }
                 }
             }
             if (collision.gameObject.tag == "StudyGroup" && isPlaying)
@@ -56,7 +62,7 @@ namespace Paulo
 
                     if (item == request)
                     {
-                        gameObject.SendMessageUpwards("PauseTimer");
+                        //gera dialogo com o grupo 
                     }
                 }
             }
@@ -83,7 +89,6 @@ namespace Paulo
                         hasBook = false;
                         activeRequest = false;
                         gameObject.SendMessageUpwards("RightCollision");
-                        gameObject.SendMessageUpwards("ContinueTimer");
                     }
                     else
                     {
@@ -95,12 +100,18 @@ namespace Paulo
                     //pausa o tempo e exibe dialogo
                     studyGroup = collision.gameObject;
                     request = studyGroup.GetComponent<StudyGroup>().GetRequest();
-                    gameObject.SendMessageUpwards("TookRequest", request);
-                    Debug.Log(activeRequest);
-                    Debug.Log(request);
-                    activeRequest = true;
+                    if (request != null) {
+                        gameObject.SendMessageUpwards("TookRequest", request);
+                        activeRequest = true;
+                    }
                 }
             }
+        }
+        private void TimeOutCollision() {
+            timeOutCollision = false;
+        }
+        public void DestroyBook() {
+            //destroi o livro e zera variaveis
         }
         public bool GetHasBook()
         {
@@ -108,7 +119,12 @@ namespace Paulo
         }
         public void StopPlaying()
         {
+            if (hasBook) {
+                transform.GetChild(0).SendMessage("Collided");
+                hasBook = false;
+            }
             isPlaying = false;
+            activeRequest = false;
         }
 
     }
