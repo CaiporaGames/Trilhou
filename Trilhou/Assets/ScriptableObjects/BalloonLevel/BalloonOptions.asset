@@ -12,5 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 56625035adee6bd439e8b10e04e20f10, type: 3}
   m_Name: BalloonOptions
   m_EditorClassIdentifier: 
-  ballonOptions: []
-  _name: Quando?
+  ballonOptions:
+  - Quando?
+  - Onde?
+  _name: Onde?
