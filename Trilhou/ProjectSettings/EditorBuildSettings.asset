@@ -20,4 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level_1/QuartoEscuro.unity
     guid: 6aec3077bf907264883607df5951db26
+  - enabled: 1
+    path: Assets/Scenes/Level_2/2.1_Introduction.unity
+    guid: 4bc31671d60646a418aa2d991597e7ac
+  - enabled: 1
+    path: Assets/Scenes/Level_2/BalloonRoom.unity
+    guid: a429fa1b0b9885441a7d192ee67ca075
   m_configObjects: {}

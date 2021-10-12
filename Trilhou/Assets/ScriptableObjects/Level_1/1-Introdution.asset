@@ -19,10 +19,8 @@ MonoBehaviour:
     names: "Maria Livr\xE3o"
   - setences: Gosto de pesquisar sobre "coisas" e depois anotar no meu livro.
     names: "Maria Livr\xE3o"
-  - setences: 'Agora mesmo, eu vi algo curioso!
-
-      Uns meninos sairam da biblioteca
-      super felizes.'
+  - setences: "Agora mesmo, eu vi algo curioso!\nUns meninos sa\xEDram da biblioteca
+      super felizes."
     names: "Maria Livr\xE3o"
   - setences: Parece que eles estavam fazendo uma tal de <color=red>pesquisa</color>...
     names: "Maria Livr\xE3o"
