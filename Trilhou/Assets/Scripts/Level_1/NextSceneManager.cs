@@ -30,8 +30,9 @@ namespace Timoteo {
                 runOnce = false;
                 LTRoundTransition.Instance.EndTransitionLoader(LoadLevel, startPosition.position, middlePosition.position, time);
             }
-        }
-     
+        }        
+       
+
         public void LoadLevel()
         {
              SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);

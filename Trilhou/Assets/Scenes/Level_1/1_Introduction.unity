@@ -7447,7 +7447,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: f183865dbad91f549850c7dce34e9e12, type: 3}
+  m_audioClip: {fileID: 8300000, guid: dae4e9dddd2766149bdeb4281a3674fb, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.1
   m_Pitch: 1
@@ -8012,7 +8012,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 6
-  m_Sprite: {fileID: 21300000, guid: a553110f887cce849a2587370d14036f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bab379da019154b49a4e2e585d3da8d9, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -9242,6 +9242,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: DialogueCanvas
+      objectReference: {fileID: 0}
+    - target: {fileID: 8889693520731526052, guid: 3b30fde2023d6e7419b17582e674c33b,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: -21
       objectReference: {fileID: 0}
     - target: {fileID: 8889693520808970947, guid: 3b30fde2023d6e7419b17582e674c33b,
         type: 3}
