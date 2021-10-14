@@ -27,6 +27,7 @@ namespace Timoteo
         Vector3 movement;
         float y;
         float x;
+        float timer;
 
         private void Start()
         {
@@ -35,18 +36,19 @@ namespace Timoteo
         }
 
         // Update is called once per frame
-        void Update()
+        void FixedUpdate()
         {
+            timer -=Time.deltaTime;
+
+            if (timer <= 0)
+            {
+                canJump = true;
+                timer = 1.5f;
+            }
             Movement();
             Jump();
             timerBetweenIdleAnimation -= Time.deltaTime;
         }
-
-        void IsGrounded()
-        {
-           
-        }
-
 
         void Movement()
         {
@@ -181,6 +183,7 @@ namespace Timoteo
         {
             if (Input.GetKeyDown(KeyCode.Space) && canJump)
             {
+                canJump = false;
                 rb.AddForce(Vector2.up * Time.deltaTime * jumpForce, ForceMode2D.Impulse);
             }
         }

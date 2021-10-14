@@ -25,6 +25,8 @@ public class LTBalloon : MonoBehaviour
         float ytime = Random.Range(4, 7);
         LeanTween.moveY(gameObject, yPosition, ytime).setEase(curve).setDelay(delay);
         LeanTween.moveX(gameObject, randomX, xtime).setEase(curve).setLoopPingPong();
+
+        Destroy(gameObject, 15);
     }
 
     void ChooseColor()

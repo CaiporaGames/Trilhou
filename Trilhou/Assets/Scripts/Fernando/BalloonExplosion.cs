@@ -19,7 +19,6 @@ public class BalloonExplosion : MonoBehaviour
             GameObject instance = Instantiate(explosionEffect, transform.position, Quaternion.identity);
 
             gameObject.SetActive(false);
-            Destroy(gameObject, 3);
             Destroy(instance, 2);
         }
     }
@@ -29,10 +28,10 @@ public class BalloonExplosion : MonoBehaviour
         float i = Random.value;
 
         if (i < chance)
-        {
+        {              
             int j = Random.Range(0, options.ballonOptions.Count);
             options._name = options.ballonOptions[j];
-            PanelManager.Instance.PutNameOnCards(options._name);
+            PanelManager.Instance.PutNameOnChoosedCard(options._name);
         }
     }
 }

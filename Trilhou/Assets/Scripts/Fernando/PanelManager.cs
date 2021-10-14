@@ -13,6 +13,10 @@ public class PanelManager : MonoBehaviour
     [SerializeField] TextMeshProUGUI textCount;
     [SerializeField] SOBalloonOptions options;
 
+
+    string[] words = new string[10]
+    {"Casa?", "Jogar?", "Televisão?", "Lua?", "Peixe?", "Dez?", "Desenho?", "Amarelo?", "Quadrado?", "Escola?" };
+
     public static PanelManager _instance;
     public static PanelManager Instance { get { return _instance; }}   
 
@@ -32,13 +36,24 @@ public class PanelManager : MonoBehaviour
         TextCounter();
     }
 
-    public void PutNameOnCards(string name)
+    public void PutNameOnChoosedCard(string name)
     {
         panel.SetActive(true);
         int i = Random.Range(0, cards.Length);
-        cards[i].text = name;
+        PutNameOnOthersCards(i);
+        cards[i].text = name;      
         card.text = name;
-        variables.gamePaused = true;
+    }
+
+    void PutNameOnOthersCards(int j)
+    {
+        for (int i = 0; i < cards.Length; i++)
+        {           
+            if (j != i)
+            {
+                cards[i].text = words[i];
+            }            
+        }
     }
 
     void TextCounter()

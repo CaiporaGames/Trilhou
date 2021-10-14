@@ -11,12 +11,12 @@ namespace Timoteo
         [SerializeField] Image[] images;
         [SerializeField] float maxPoints = 10;
         [SerializeField] float lerpSpeed;
+        [SerializeField] SOGeneralVariables generalVariables;
 
         static PointsBar instance;
         public static PointsBar Instance { get { return instance; } }
 
         AudioSource audioSource;
-        float points = 0;
         int imageIndex;
 
         private void Awake()
@@ -34,26 +34,23 @@ namespace Timoteo
         private void Start()
         {
             audioSource = GetComponent<AudioSource>();
-        }
 
-        private void Update()
-        {
-            if (Input.GetKeyDown(KeyCode.Space))//This is just for testing purpose
+            for (int i = 0; i < generalVariables.pointsbarPoints; i++)
             {
                 Image image = images[imageIndex].GetComponent<Image>();
                 Color imageColor = image.color;
                 imageColor.a = 1;
                 image.color = imageColor;
-                LeanTween.alpha(images[imageIndex].GetComponent<RectTransform>(), 1, lerpSpeed);
-                LeanTween.scale(gameObject.GetComponent<RectTransform>(),
-                    gameObject.GetComponent<RectTransform>().localScale * 1.5f, 0.5f).setOnComplete(RestoreScale).setDelay(0.1f);
-                audioSource.Play();
-                imageIndex++;
             }
         }
+    
 
         public void AddPointsToBar()//this will add a point on the points bar.
         {
+            if (maxPoints == images.Length)
+            {
+                return;
+            }
             Image image = images[imageIndex].GetComponent<Image>();
             Color imageColor = image.color;
             imageColor.a = 1;

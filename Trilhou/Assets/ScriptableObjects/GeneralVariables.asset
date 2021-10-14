@@ -13,3 +13,5 @@ MonoBehaviour:
   m_Name: GeneralVariables
   m_EditorClassIdentifier: 
   gamePaused: 0
+  pointsbarPoints: 0
+  playerHearts: 3

@@ -31,6 +31,11 @@ namespace Timoteo
             }
         }
 
+        private void Start()
+        {
+            NextLevel();
+        }
+
         public void NextLevel()
         {
             LTRoundTransition.Instance.EndTransitionLoader(LoadLevel, startPosition.position, middlePosition.position, time);
