@@ -41,7 +41,7 @@ public class Books : MonoBehaviour
     public string GetColor() {
         return this.color;
     }
-    public void Colidiu() {
+    public void Collided() {
         this.gameObject.SetActive(false);
         Destroy(this.gameObject, 2);
     }
