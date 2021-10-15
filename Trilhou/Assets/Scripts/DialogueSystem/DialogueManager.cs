@@ -22,6 +22,8 @@ namespace Timoteo
 
         public delegate void nextDialogueDelegate();
         public static nextDialogueDelegate NextDialogueDelegate;//it is called everytime the player press the next button
+        public delegate void lastDialogueIndexDelegate();
+        public static lastDialogueIndexDelegate lastDialogueIndex;
 
         private void Awake()
         {
@@ -47,6 +49,8 @@ namespace Timoteo
 
         public void NextDialogue()//this controls the next dialogue when the player press the next button
         {
+            LastDialogueIndex();
+
             if (setenceIndex < dialogues.setences.Length - 1)
             {
                 setenceIndex++;
@@ -61,6 +65,14 @@ namespace Timoteo
             {
                 setenceIndex--;
                 DisplayDialogue(setenceIndex);
+            }
+        }
+
+        void LastDialogueIndex()
+        {
+            if (setenceIndex == dialogues.setences.Length-1)
+            {
+                lastDialogueIndex?.Invoke();
             }
         }
 

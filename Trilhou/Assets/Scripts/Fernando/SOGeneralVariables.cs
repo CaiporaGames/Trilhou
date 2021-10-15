@@ -9,6 +9,11 @@ public class SOGeneralVariables : ScriptableObject
     public int pointsbarPoints;
     public int playerHearts = 3;
 
+    public void RestartPlayerHearts()
+    {
+        playerHearts = 3;
+    }
+
     private void OnDisable()
     {
         gamePaused = false;

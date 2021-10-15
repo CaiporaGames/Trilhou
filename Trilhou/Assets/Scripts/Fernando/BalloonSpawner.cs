@@ -23,6 +23,7 @@ namespace Timoteo
             timeBetweenBalloons = maxTimeBetweenBalloons;
             SpawnObjects();
             options.AddWordsToBallonOptions();
+            variables.RestartPlayerHearts();
         }
 
         private void Update()

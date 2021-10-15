@@ -71,7 +71,7 @@ namespace Timoteo
                 {
                     generalVariables.gamePaused = false;
                     generalVariables.playerHearts--;
-                    hearts[generalVariables.playerHearts].gameObject.SetActive(false);
+                    hearts[generalVariables.playerHearts].gameObject.GetComponent<LTBalloonEffect>().StartEffect();
                     panel.SetActive(false);
 
                 }

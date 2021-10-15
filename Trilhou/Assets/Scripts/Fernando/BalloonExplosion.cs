@@ -8,11 +8,14 @@ public class BalloonExplosion : MonoBehaviour
     [SerializeField] SOBalloonOptions options;
     [SerializeField] float chance;
 
+    public delegate void BalloonOptionIsEmptyDelegate();
+    public static BalloonOptionIsEmptyDelegate balloonOptionIsEmpty;
+
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("ground") || collision.CompareTag("Player"))
         {
-            if (collision.CompareTag("Player"))
+            if (collision.CompareTag("Player") && options.ballonOptions.Count != 0)
             {
                 OptionChooser();
             }
@@ -32,6 +35,14 @@ public class BalloonExplosion : MonoBehaviour
             int j = Random.Range(0, options.ballonOptions.Count);
             options._name = options.ballonOptions[j];
             PanelManager.Instance.PutNameOnChoosedCard(options._name);
+        }
+    }
+
+    void BalloonOptionsAreEmpty()
+    {
+        if (options.ballonOptions.Count == 0)
+        {
+            balloonOptionIsEmpty?.Invoke();
         }
     }
 }
