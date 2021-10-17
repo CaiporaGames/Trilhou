@@ -15,6 +15,7 @@ namespace Timoteo
         [SerializeField] Vector3 scaleDirection;
         [SerializeField] float time;
         [SerializeField] SOObjectsCount objectsCount;
+        [SerializeField] FadeTransition transitionEffect;
 
         Transform uiElementPos;
         Image uiImage;
@@ -42,7 +43,7 @@ namespace Timoteo
         IEnumerator DelayToNextLevel()
         {
             yield return new WaitForSeconds(2);
-            NextLevelManagerWithoutIndice.Instance.NextLevel();
+            transitionEffect.CloseTransition();
         }
     }
 }

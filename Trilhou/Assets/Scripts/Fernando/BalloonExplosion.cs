@@ -2,47 +2,64 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BalloonExplosion : MonoBehaviour
+namespace Timoteo
 {
-    [SerializeField] GameObject explosionEffect;
-    [SerializeField] SOBalloonOptions options;
-    [SerializeField] float chance;
-
-    public delegate void BalloonOptionIsEmptyDelegate();
-    public static BalloonOptionIsEmptyDelegate balloonOptionIsEmpty;
-
-    private void OnTriggerEnter2D(Collider2D collision)
+    public class BalloonExplosion : MonoBehaviour
     {
-        if (collision.CompareTag("ground") || collision.CompareTag("Player"))
+        [SerializeField] GameObject explosionEffect;
+        [SerializeField] SOBalloonOptions options;
+        [SerializeField] SOGeneralVariables variables;
+        [SerializeField] float chance;
+
+        public delegate void BalloonOptionIsEmptyDelegate();
+        public static BalloonOptionIsEmptyDelegate balloonOptionIsEmpty;
+        AudioSource audioSource;
+        Collider2D _collider;
+
+        private void Awake()
         {
-            if (collision.CompareTag("Player") && options.ballonOptions.Count != 0)
+            audioSource = GetComponent<AudioSource>();
+            _collider = GetComponent<Collider2D>();
+        }
+
+        private void OnTriggerEnter2D(Collider2D collision)
+        {
+            if (collision.CompareTag("ground") || collision.CompareTag("Player"))
             {
-                OptionChooser();
+                audioSource.Play();
+                _collider.enabled = false;
+                if (collision.CompareTag("Player") && options.ballonOptions.Count != 0)
+                {
+                    OptionChooser();
+                }
+                GameObject instance = Instantiate(explosionEffect, transform.position, Quaternion.identity);
+
+                transform.GetChild(0).gameObject.SetActive(false);
+                Destroy(instance, 2);
+                Destroy(gameObject,3);
             }
-            GameObject instance = Instantiate(explosionEffect, transform.position, Quaternion.identity);
-
-            gameObject.SetActive(false);
-            Destroy(instance, 2);
         }
-    }
 
-    void OptionChooser()
-    {
-        float i = Random.value;
-
-        if (i < chance)
-        {              
-            int j = Random.Range(0, options.ballonOptions.Count);
-            options._name = options.ballonOptions[j];
-            PanelManager.Instance.PutNameOnChoosedCard(options._name);
-        }
-    }
-
-    void BalloonOptionsAreEmpty()
-    {
-        if (options.ballonOptions.Count == 0)
+        void OptionChooser()
         {
-            balloonOptionIsEmpty?.Invoke();
+             float i = Random.value;
+
+            if (i < chance)
+            {
+                int j = Random.Range(0, options.ballonOptions.Count);
+                options._name = options.ballonOptions[j];
+                PanelManager.Instance.PutNameOnChoosedCard(options._name);
+                variables.gamePaused = true;
+                LeanTween.pauseAll();
+            }
+        }
+
+        void BalloonOptionsAreEmpty()
+        {
+            if (options.ballonOptions.Count == 0)
+            {
+                balloonOptionIsEmpty?.Invoke();
+            }
         }
     }
 }

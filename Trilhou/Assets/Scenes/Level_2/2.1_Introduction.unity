@@ -1725,7 +1725,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 62be053d4fe52794ba36da18602525d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  options: {fileID: 0}
+  messageCanvas: {fileID: 0}
+  fadeTransition: {fileID: 0}
 --- !u!82 &885466747
 AudioSource:
   m_ObjectHideFlags: 0
@@ -4244,6 +4245,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_IsActive
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2775416688485733896, guid: 5a6b10e9dc4322a41b26610fbfe159c3,
+        type: 3}
+      propertyPath: m_Alpha
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5a6b10e9dc4322a41b26610fbfe159c3, type: 3}

@@ -9,7 +9,6 @@ namespace Timoteo
     public class PointsBar : MonoBehaviour
     {
         [SerializeField] Image[] images;
-        [SerializeField] float maxPoints = 10;
         [SerializeField] float lerpSpeed;
         [SerializeField] SOGeneralVariables generalVariables;
 
@@ -29,6 +28,8 @@ namespace Timoteo
             {
                 instance = this;
             }
+
+            imageIndex = generalVariables.pointsbarPoints;
         }
 
         private void Start()
@@ -37,7 +38,7 @@ namespace Timoteo
 
             for (int i = 0; i < generalVariables.pointsbarPoints; i++)
             {
-                Image image = images[imageIndex].GetComponent<Image>();
+                Image image = images[i].GetComponent<Image>();
                 Color imageColor = image.color;
                 imageColor.a = 1;
                 image.color = imageColor;
@@ -47,14 +48,19 @@ namespace Timoteo
 
         public void AddPointsToBar()//this will add a point on the points bar.
         {
-            if (maxPoints == images.Length)
+            if (generalVariables.pointsbarPoints == images.Length)
             {
                 return;
             }
+            generalVariables.pointsbarPoints++;
+
+           
             Image image = images[imageIndex].GetComponent<Image>();
             Color imageColor = image.color;
             imageColor.a = 1;
             image.color = imageColor;
+            
+
             LeanTween.alpha(images[imageIndex].GetComponent<RectTransform>(), 1, lerpSpeed);
             LeanTween.scale(gameObject.GetComponent<RectTransform>(),
                 gameObject.GetComponent<RectTransform>().localScale * 1.5f, 0.5f).setOnComplete(RestoreScale).setDelay(0.1f);//animate the bar when the player get a point

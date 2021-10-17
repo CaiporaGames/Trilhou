@@ -21,8 +21,11 @@ namespace Timoteo
        
 
         Vector3 startPos;
-      
 
+        public delegate void ShowStar();
+        public static ShowStar showStar;
+
+      
         private void Start()
         {
             cardText = GetComponentInChildren<TextMeshProUGUI>();
@@ -42,14 +45,18 @@ namespace Timoteo
 
         public void OnPointerDown(PointerEventData eventData)
         {
+
             canDrag = true;
             runOnce = true;
+            LeanTween.resume(gameObject);
             LeanTween.scale(gameObject, new Vector3(1f, 0.5f, 1), 0.5f);
+
         }
 
         public void OnPointerUp(PointerEventData eventData)
         {
             canDrag = false;
+            LeanTween.resume(gameObject);
             LeanTween.scale(gameObject, new Vector3(2f, 1f, 1), 0.5f);
 
         }
@@ -66,6 +73,8 @@ namespace Timoteo
                     options.RemoveFromList(cardText.text);
                     panel.SetActive(false);
                     generalVariables.gamePaused = false;
+                    LeanTween.resumeAll();
+                    showStar?.Invoke();
                 }
                 else
                 {
@@ -73,6 +82,7 @@ namespace Timoteo
                     generalVariables.playerHearts--;
                     hearts[generalVariables.playerHearts].gameObject.GetComponent<LTBalloonEffect>().StartEffect();
                     panel.SetActive(false);
+                    LeanTween.resumeAll();
 
                 }
 

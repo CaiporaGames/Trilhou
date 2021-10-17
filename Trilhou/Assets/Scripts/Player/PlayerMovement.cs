@@ -16,6 +16,7 @@ namespace Timoteo
         [Tooltip("The character can walk in 2 dimensions? If YES: Mark the box!")]
         [SerializeField] bool is2D = true;
         [SerializeField] SOGeneralVariables variables;
+        
 
 
         //   [Private Variables]
@@ -54,8 +55,9 @@ namespace Timoteo
         {
             if (!variables.gamePaused)
             {
-                x = Input.GetAxis("Horizontal");
-
+                
+                x = Input.GetAxis("Horizontal");               
+                
                 if (is2D)
                 {
                     y = Input.GetAxis("Vertical");
@@ -63,8 +65,8 @@ namespace Timoteo
 
 
                 if (!is2D)
-                {
-                    movement = new Vector3(speed.x * x, 0, 0);
+                {                   
+                    movement = new Vector3(speed.x * x, 0, 0);                   
                 }
                 else
                 {

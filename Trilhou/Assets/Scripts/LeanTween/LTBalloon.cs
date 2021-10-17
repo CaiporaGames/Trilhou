@@ -13,7 +13,7 @@ public class LTBalloon : MonoBehaviour
 
     SpriteRenderer sprite;
     private void Awake()
-    {
+    {       
         sprite = transform.GetChild(0).GetComponent<SpriteRenderer>();
         ChooseColor();
         ChooseSize();

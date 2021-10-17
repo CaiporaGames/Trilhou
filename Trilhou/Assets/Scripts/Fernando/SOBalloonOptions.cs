@@ -11,7 +11,7 @@ public class SOBalloonOptions : ScriptableObject
 
     private void OnDisable()
     {
-        ballonsCounter = ballonOptions.Count;
+        ballonsCounter = 11;
     }
 
     public void AddWordsToBallonOptions()

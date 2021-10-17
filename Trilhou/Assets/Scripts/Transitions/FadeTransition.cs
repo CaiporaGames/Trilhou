@@ -15,6 +15,11 @@ namespace Timoteo
         {
             DialogueManager.lastDialogueIndex += CloseTransition;
             canvasGroup = GetComponent<CanvasGroup>();
+            canvasGroup.alpha = 1;
+        }
+
+        private void Start()
+        {
             ResetScales();
             OpenTransition();
         }

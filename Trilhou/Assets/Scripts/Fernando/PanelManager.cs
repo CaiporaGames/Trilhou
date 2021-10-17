@@ -1,64 +1,82 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using TMPro;
 
-public class PanelManager : MonoBehaviour
+
+namespace Timoteo
 {
-
-    [SerializeField] GameObject panel;
-    [SerializeField] TextMeshProUGUI[] cards;                           
-    [SerializeField] TextMeshProUGUI card;
-    [SerializeField] SOGeneralVariables variables;
-    [SerializeField] TextMeshProUGUI textCount;
-    [SerializeField] SOBalloonOptions options;
-
-
-    string[] words = new string[10]
-    {"Casa?", "Jogar?", "Televisão?", "Lua?", "Peixe?", "Dez?", "Desenho?", "Amarelo?", "Quadrado?", "Escola?" };
-
-    public static PanelManager _instance;
-    public static PanelManager Instance { get { return _instance; }}   
-
-    private void Awake()
+    public class PanelManager : MonoBehaviour
     {
-        if (_instance != null && _instance != this)
+
+        [SerializeField] GameObject panel;
+        [SerializeField] TextMeshProUGUI[] cards;
+        [SerializeField] TextMeshProUGUI card;
+        [SerializeField] SOGeneralVariables variables;
+        [SerializeField] SOBalloonOptions options;
+        [SerializeField] Image[] stars = new Image[11];
+
+        AudioSource audioSource;
+
+        string[] words = new string[10]
+        {"Casa?", "Jogar?", "Televisão?", "Lua?", "Peixe?", "Dez?", "Desenho?", "Amarelo?", "Quadrado?", "Escola?" };
+
+        public static PanelManager _instance;
+        public static PanelManager Instance { get { return _instance; } }
+
+        private void OnEnable()
         {
-            Destroy(gameObject);
-        }else
-        {
-            _instance = this;
+            DragCard.showStar += StarCount;
         }
-    }
 
-    private void Update()
-    {
-        TextCounter();
-    }
-
-    public void PutNameOnChoosedCard(string name)
-    {
-        panel.SetActive(true);
-        int i = Random.Range(0, cards.Length);
-        PutNameOnOthersCards(i);
-        cards[i].text = name;      
-        card.text = name;
-    }
-
-    void PutNameOnOthersCards(int j)
-    {
-        for (int i = 0; i < cards.Length; i++)
-        {           
-            if (j != i)
+        private void Awake()
+        {
+            audioSource = GetComponent<AudioSource>();
+            if (_instance != null && _instance != this)
             {
-                cards[i].text = words[i];
-            }            
+                Destroy(gameObject);
+            }
+            else
+            {
+                _instance = this;
+            }
         }
-    }
 
-    void TextCounter()
-    {
-        textCount.text = "Faltam: " + options.ballonOptions.Count.ToString();
+
+        public void PutNameOnChoosedCard(string name)
+        {
+            panel.SetActive(true);
+            int i = Random.Range(0, cards.Length);
+            PutNameOnOthersCards(i);
+            cards[i].text = name;
+            card.text = name;
+        }
+
+        void PutNameOnOthersCards(int j)
+        {
+            for (int i = 0; i < cards.Length; i++)
+            {
+                if (j != i)
+                {
+                    cards[i].text = words[i];
+                }
+            }
+        }
+
+        void StarCount()
+        {
+            Image star = stars[11 - options.ballonOptions.Count - 1];
+            star.color = new Color(1, 1, 0, 1);
+            LeanTween.scale(star.gameObject, new Vector3(1.01f,1.01f,1), 0.5f).setEasePunch();
+            audioSource.Play();
+            // textCount.text = "Faltam: " + options.ballonOptions.Count.ToString();
+        }
+
+        private void OnDisable()
+        {
+            DragCard.showStar -= StarCount;
+        }
+
     }
-   
 }

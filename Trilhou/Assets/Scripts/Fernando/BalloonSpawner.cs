@@ -16,7 +16,7 @@ namespace Timoteo
         [SerializeField] GameObject messagePanel;
 
         float timeBetweenBalloons;
-
+        bool runOnce = true;
 
         private void Start()
         {
@@ -33,23 +33,32 @@ namespace Timoteo
             {
                 SpawnObjects();
             }
-            if (options.ballonsCounter == 0)
+            if (options.ballonsCounter == 0 && runOnce)
             {
+                runOnce = false;
                 PointsBar.Instance.AddPointsToBar();
+                StartCoroutine(NextScene());
             }
             if (variables.playerHearts <= 0)
             {
                 messagePanel.SetActive(true);
                 messagePanel.transform.GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>().text =
                     "Oh, você não acertou. Não desista, tente novamente!";
-                StartCoroutine(NextScene());
+                StartCoroutine(ReloadScene());
             }
+           
+        }
+
+        IEnumerator ReloadScene()
+        {
+            yield return new WaitForSecondsRealtime(3);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
 
         IEnumerator NextScene()
         {
             yield return new WaitForSecondsRealtime(3);
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 1);
         }
 
         void SpawnObjects()
@@ -68,6 +77,7 @@ namespace Timoteo
         public void UnpauseGame()
         {
             variables.gamePaused = true;
+            LeanTween.resumeAll();
         }
     }
 }
