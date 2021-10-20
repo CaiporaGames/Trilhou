@@ -13,16 +13,12 @@ MonoBehaviour:
   m_Name: BalloonOptions
   m_EditorClassIdentifier: 
   ballonOptions:
-  - Quando?
-  - Que?
-  - Quanto?
-  - E se?
-  - Qual?
-  - Por que?
-  - O que?
-  - De que maneira?
-  - Como?
   - Quem?
   - Onde?
-  _name: De que maneira?
-  ballonsCounter: 11
+  - Quando?
+  - Como?
+  - De que maneira?
+  - O que?
+  - Qual?
+  _name: Quem?
+  ballonsCounter: 7

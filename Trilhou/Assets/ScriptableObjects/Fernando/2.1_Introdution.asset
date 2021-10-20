@@ -22,7 +22,7 @@ MonoBehaviour:
   - setences: "chegou a hora de \r\ndescobrir qual o tema que voc\xEA quer dentro
       desse assunto."
     names: "Bibliotec\xE1ria"
-  - setences: "Para isso, voc\xEA precisa fazer alguma perguntas para formular suas
+  - setences: "Para isso, voc\xEA precisa fazer algumas perguntas para formular suas
       \r\nquest\xF5es!"
     names: "Bibliotec\xE1ria"
   - setences: 'exemplos: <color=red>Quem?, Onde?, Quando?, Como?, de que maneira?,
@@ -38,5 +38,5 @@ MonoBehaviour:
     names: "Bibliotec\xE1ria"
   - setences: "voc\xEA precisa pensar nas perguntas para sua pesquisa."
     names: "Bibliotec\xE1ria"
-  - setences: "Ok. J\xE1 estou pensando em aglumas perguntas legais sobre minha pesquisa."
+  - setences: "Ok. J\xE1 estou pensando em algumas perguntas legais sobre minha pesquisa."
     names: "Maria Livr\xE3o"

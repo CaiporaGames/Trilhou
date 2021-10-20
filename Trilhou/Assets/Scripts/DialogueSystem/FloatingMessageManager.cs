@@ -15,4 +15,10 @@ public class FloatingMessageManager : MonoBehaviour
         messagerPanel.SetActive(false);
         Time.timeScale = 1;
     }
+
+    public void OpenMessage()
+    {
+        messagerPanel.SetActive(true);
+        Time.timeScale = 0;
+    }
 }
