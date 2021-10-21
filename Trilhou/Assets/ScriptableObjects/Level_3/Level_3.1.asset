@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e4e81c534a8f941b0a885a12ff1e3c, type: 3}
+  m_Name: Level_3.1
+  m_EditorClassIdentifier: 
+  setences:
+  - setences: "Agora que eu tenho o assunto e as perguntas elaboradas, qual o pr\xF3ximo
+      passo?"
+    names: "Maria Livr\xE3o"
+  - setences: "Agora voc\xEA vai responder essas perguntas que voc\xEA elaborou e
+      fazer um fichamento."
+    names: Bibliotecaria
+  - setences: "N\xE3o pode esquecer das fontes!"
+    names: Bibliotecaria
+  - setences: "Fichamento?? Fontes??? N\xE3o estou entendendo nada!"
+    names: "Maria Livr\xE3o"
+  - setences: "Calma!! Maria! Vou explicar tudo para voc\xEA. Vamos l\xE1?"
+    names: Bibliotecaria

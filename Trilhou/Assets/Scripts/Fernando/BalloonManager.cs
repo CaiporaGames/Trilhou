@@ -29,6 +29,7 @@ namespace Timoteo {
 
         void RaiseWinPanel()
         {
+            messageCanvas.SetActive(true);
             messageCanvas.transform.GetChild(0).GetChild(1).GetComponent<TextMeshProUGUI>().text = "Parabéns, Você acertou todas!";
         }
 
@@ -39,7 +40,7 @@ namespace Timoteo {
 
         IEnumerator Transition()
         {
-            yield return new WaitForSeconds(4);
+            yield return new WaitForSecondsRealtime(4);
             fadeTransition.CloseTransition();
         }
     }
