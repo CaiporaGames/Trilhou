@@ -11,6 +11,7 @@ namespace Timoteo {
 
         public void Camera2DMovement(byte index)
         {
+            
             if (index == Positions[dialogueIndex].index){
 
                     LeanTween.cancelAll();
