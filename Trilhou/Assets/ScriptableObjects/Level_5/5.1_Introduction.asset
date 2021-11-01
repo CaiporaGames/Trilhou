@@ -1,0 +1,24 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d8e4e81c534a8f941b0a885a12ff1e3c, type: 3}
+  m_Name: 5.1_Introduction
+  m_EditorClassIdentifier: 
+  setences:
+  - setences: "Agora que voc\xEA definiu o foco Maria, fa\xE7a outro fichamento.\n"
+    names: Bibliotecaria
+  - setences: "J\xE1 sei fazer um fichamento."
+    names: Maria Livrao
+  - setences: 'Agora coleguinha, pergunte ao professor para verificar
+
+      seu
+      fichamento.'
+    names: Maria Livrao
