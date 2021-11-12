@@ -2592,22 +2592,22 @@ PrefabInstance:
     - target: {fileID: 4622609942710162297, guid: 4939ba772999ae54cb84521df8a5555a,
         type: 3}
       propertyPath: Positions.Array.data[1].index
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4622609942710162297, guid: 4939ba772999ae54cb84521df8a5555a,
         type: 3}
       propertyPath: Positions.Array.data[2].index
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4622609942710162297, guid: 4939ba772999ae54cb84521df8a5555a,
         type: 3}
       propertyPath: Positions.Array.data[3].index
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4622609942710162297, guid: 4939ba772999ae54cb84521df8a5555a,
         type: 3}
       propertyPath: Positions.Array.data[4].index
-      value: 10
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 4622609942710162297, guid: 4939ba772999ae54cb84521df8a5555a,
         type: 3}

@@ -13,15 +13,22 @@ MonoBehaviour:
   m_Name: Level_3.1
   m_EditorClassIdentifier: 
   setences:
-  - setences: "Agora que eu tenho o assunto e as perguntas elaboradas, qual o pr\xF3ximo
+  - setences: "Oba, tenho o assunto e as perguntas elaboradas, qual o pr\xF3ximo
       passo?"
     names: "Maria Livr\xE3o"
-  - setences: "Agora voc\xEA vai responder essas perguntas que voc\xEA elaborou e
-      fazer um fichamento."
+  - setences: "Com o seu assunto selecionado e as quest\xF5es respondidas,"
+    names: Bibliotecaria
+  - setences: " o pr\xF3ximo passo \xE9 listar ideias e fazer anota\xE7\xF5es sobre
+      o assunto escolhido e realizar os fichamentos."
     names: Bibliotecaria
   - setences: "N\xE3o pode esquecer das fontes!"
     names: Bibliotecaria
   - setences: "Fichamento?? Fontes??? N\xE3o estou entendendo nada!"
     names: "Maria Livr\xE3o"
-  - setences: "Calma!! Maria! Vou explicar tudo para voc\xEA. Vamos l\xE1?"
+  - setences: "Fichamento, \xE9 um pequeno resumo dos materiais que voc\xEA leu at\xE9
+      agora!"
+    names: Bibliotecaria
+  - setences: "Ahh! Entendi! Ent\xE3o, vou fazer os resumos com muita aten\xE7\xE3o."
+    names: Maria Livrao
+  - setences: Isso mesmo Maria!
     names: Bibliotecaria

@@ -245,6 +245,11 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2775416688485733896, guid: 5a6b10e9dc4322a41b26610fbfe159c3,
+        type: 3}
+      propertyPath: m_Alpha
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2775416688485733899, guid: 5a6b10e9dc4322a41b26610fbfe159c3,
         type: 3}
       propertyPath: time
@@ -20225,7 +20230,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &2111340725
 Transform:
   m_ObjectHideFlags: 0

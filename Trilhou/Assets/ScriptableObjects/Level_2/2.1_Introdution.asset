@@ -13,17 +13,17 @@ MonoBehaviour:
   m_Name: 2.1_Introdution
   m_EditorClassIdentifier: 
   setences:
-  - setences: "Oi, consegui achar as fontes para fazer a pesquisa e \r\nj\xE1 sei
-      o que quero pesquisar."
+  - setences: Consegui selecionar as fontes que vou utilizar na minha pesquisa.
     names: "Maria Livr\xE3o"
-  - setences: "Que bom!! Maria. J\xE1 que voc\xEA descobriu qual o assunto que voc\xEA
-      quer \r\npesquisar e quais as fontes que voc\xEA vai usar"
+  - setences: " Agora, vou escolher sobre o que devo pesquisar, os poss\xEDveis assuntos. "
+    names: "Maria Livr\xE3o"
+  - setences: "Que bom Maria! A pr\xF3xima etapa \xE9 selecionar o assunto! "
     names: "Bibliotec\xE1ria"
-  - setences: "chegou a hora de \r\ndescobrir qual o tema que voc\xEA quer dentro
-      desse assunto."
+  - setences: "Chegou a hora de \rdescobrir qual o tema que voc\xEA quer dentro desse
+      assunto."
     names: "Bibliotec\xE1ria"
-  - setences: "Para isso, voc\xEA precisa fazer algumas perguntas para formular suas
-      \r\nquest\xF5es!"
+  - setences: "Para isso, voc\xEA deve fazer 4 perguntas sobre o ASSUNTO com o objetivo
+      de identificar o assunto definitivo da sua pesquisa. "
     names: "Bibliotec\xE1ria"
   - setences: 'exemplos: <color=red>Quem?, Onde?, Quando?, Como?, de que maneira?,
       O que? Qual?</color>'

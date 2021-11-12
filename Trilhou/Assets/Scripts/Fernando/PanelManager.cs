@@ -19,8 +19,8 @@ namespace Timoteo
 
         AudioSource audioSource;
 
-        string[] words = new string[10]
-        {"Casa?", "Jogar?", "Televisão?", "Lua?", "Peixe?", "Dez?", "Desenho?", "Amarelo?", "Quadrado?", "Escola?" };
+        string[] words = new string[4]
+        {"Não gostei do assunto!", "Não foi isso que o professor pediu!", "Não vou conseguir organizar essas informações!", "Estou tão confusa!"};
 
         public static PanelManager _instance;
         public static PanelManager Instance { get { return _instance; } }

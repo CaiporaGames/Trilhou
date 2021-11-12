@@ -2123,7 +2123,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c68f3431e09c10498e2f896f09e3947, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueIndex: 12
+  dialogueIndex: 13
   startPosition: {fileID: 1251514770}
   middlePosition: {fileID: 1657475725}
   time: 2
@@ -3478,6 +3478,21 @@ PrefabInstance:
       propertyPath: Positions.Array.data[4].B
       value: 
       objectReference: {fileID: 1885423058}
+    - target: {fileID: 4622609942710162297, guid: 4939ba772999ae54cb84521df8a5555a,
+        type: 3}
+      propertyPath: Positions.Array.data[2].index
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622609942710162297, guid: 4939ba772999ae54cb84521df8a5555a,
+        type: 3}
+      propertyPath: Positions.Array.data[3].index
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622609942710162297, guid: 4939ba772999ae54cb84521df8a5555a,
+        type: 3}
+      propertyPath: Positions.Array.data[4].index
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4622609942710162297, guid: 4939ba772999ae54cb84521df8a5555a,
         type: 3}
       propertyPath: Positions.Array.data[0].endPoint
