@@ -66,7 +66,7 @@ namespace Timoteo
 
         void StarCount()
         {
-            Image star = stars[11 - options.ballonOptions.Count - 1];
+            Image star = stars[4 - options.ballonOptions.Count - 1];
             star.color = new Color(1, 1, 0, 1);
             LeanTween.scale(star.gameObject, new Vector3(1.01f,1.01f,1), 0.5f).setEasePunch();
             audioSource.Play();

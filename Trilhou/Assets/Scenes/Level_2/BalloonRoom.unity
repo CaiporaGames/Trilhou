@@ -4603,7 +4603,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: {x: 10, y: 10}
-  jumpForce: 300
+  jumpForce: 400
   maxTimerBetweenIdleAnimation: 15
   is2D: 0
   variables: {fileID: 11400000, guid: a4b3eb36f7d3d344cb5216149395c55b, type: 2}

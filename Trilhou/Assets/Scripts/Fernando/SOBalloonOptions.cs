@@ -11,7 +11,7 @@ public class SOBalloonOptions : ScriptableObject
 
     private void OnDisable()
     {
-        ballonsCounter = 5;
+        ballonsCounter = 4;
     }
 
     public void AddWordsToBallonOptions()
@@ -19,8 +19,8 @@ public class SOBalloonOptions : ScriptableObject
         ballonOptions.Clear();
         ballonOptions.Insert(0, "O assunto é interessante? ");
         ballonOptions.Insert(1, "O assunto atende a tarefa solicitada pelo professor?");
-        ballonOptions.Insert(1, "Existem informações suficientes sobre esse assunto na biblioteca e na internet? ");
-        ballonOptions.Insert(1, "Posso organizar as informações para apresentar no prazo que o professor pediu?");     
+        ballonOptions.Insert(2, "Existem informações suficientes sobre esse assunto na biblioteca e na internet? ");
+        ballonOptions.Insert(3, "Posso organizar as informações para apresentar no prazo que o professor pediu?");     
     }
     public void RemoveFromList(string name)
     {
