@@ -11,10 +11,9 @@ namespace Timoteo {
 
         public void Camera2DMovement(byte index)
         {
-            
-            if (index == Positions[dialogueIndex].index){
-
-                    LeanTween.cancelAll();
+           
+            if (index == Positions[dialogueIndex].index){             
+                LeanTween.cancelAll();
                     Positions[dialogueIndex].B.gameObject.SetActive(false);
                     Positions[dialogueIndex].A.gameObject.SetActive(true);
 

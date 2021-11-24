@@ -1581,8 +1581,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Pergunte ao professor o asunto de pesquisa. Depois do assunto escolhido,
-    o professor insere o c\xF3digo no campo abaixo."
+  m_text: "Procure o professor para as \xFAltimas orienta\xE7\xF5es para a apresenta\xE7\xE3o
+    final! . O professor insere o c\xF3digo no campo abaixo."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9c631e316e3c4cb418db85c0fd6da274, type: 2}
   m_sharedMaterial: {fileID: -1358875373512603180, guid: 9c631e316e3c4cb418db85c0fd6da274,
@@ -2138,7 +2138,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   codeInput: {fileID: 41968579}
   errorMessage: {fileID: 319486082}
-  codes: {fileID: 11400000, guid: 716a07755f689e84cbde2910ac9ca530, type: 2}
+  codes: {fileID: 11400000, guid: 1163f6465089a4a43994d7dd88fae830, type: 2}
 --- !u!82 &2122803321
 AudioSource:
   m_ObjectHideFlags: 0

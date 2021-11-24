@@ -13,12 +13,20 @@ MonoBehaviour:
   m_Name: 5.1_Introduction
   m_EditorClassIdentifier: 
   setences:
-  - setences: "Agora que voc\xEA definiu o foco Maria, fa\xE7a outro fichamento.\n"
-    names: Bibliotecaria
-  - setences: "J\xE1 sei fazer um fichamento."
+  - setences: Pronto respondi as 4 perguntas.
     names: Maria Livrao
-  - setences: 'Agora coleguinha, pergunte ao professor para verificar
+  - setences: 'E agora?
 
-      seu
-      fichamento.'
+'
     names: Maria Livrao
+  - setences: "Agora Maria, voc\xEA vai reunir todas as informa\xE7\xF5es que est\xE3o
+      relacionadas ao seu foco e coletar as informa\xE7\xF5es mais espec\xEDficas
+      sobre ele."
+    names: Bibliotecaria
+  - setences: "Lembrando sempre de anotar as refer\xEAncias dos materiais que voc\xEA
+      utilizar. "
+    names: Bibliotecaria
+  - setences: "Refer\xEAncias? Voc\xEA pode mostrar um exemplo?"
+    names: Maria Livrao
+  - setences: "Claro! Veja esse modelo de refer\xEAncia de livro."
+    names: Bibliotecaria

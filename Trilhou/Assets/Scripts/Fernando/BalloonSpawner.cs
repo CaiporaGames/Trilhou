@@ -36,7 +36,7 @@ namespace Timoteo
             if (options.ballonsCounter == 0 && runOnce)
             {
                 runOnce = false;
-                PointsBar.Instance.AddPointsToBar();
+                //PointsBar.Instance.AddPointsToBar();
                 StartCoroutine(NextScene());
             }
             if (variables.playerHearts <= 0)

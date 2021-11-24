@@ -15,14 +15,14 @@ EditorBuildSettings:
     path: Assets/Scenes/Level_1/3_Introduction.unity
     guid: 22e289d28082b9b4caaeeea6cf531d40
   - enabled: 1
+    path: Assets/Scenes/Level_1/CodeScene.unity
+    guid: 6941556f5d0b2264794eb11e7d2ca1be
+  - enabled: 1
     path: Assets/Scenes/Level_1/4-Introduction.unity
     guid: 06f3e5e709cc83246802faba70478a63
   - enabled: 1
     path: Assets/Scenes/Level_1/QuartoEscuro.unity
     guid: 6aec3077bf907264883607df5951db26
-  - enabled: 1
-    path: Assets/Scenes/Level_1/CodeScene.unity
-    guid: 6941556f5d0b2264794eb11e7d2ca1be
   - enabled: 1
     path: Assets/Scenes/Level_2/2.1_Introduction.unity
     guid: 4bc31671d60646a418aa2d991597e7ac
@@ -36,14 +36,32 @@ EditorBuildSettings:
     path: Assets/Scenes/Level_3/Blackboard.unity
     guid: 4feb6adb0803f8342b5cc3c261038a39
   - enabled: 1
+    path: Assets/Scenes/Level_3/CodeScene 3.1.unity
+    guid: 07aab0d9007b6494f86f82a86bd48181
+  - enabled: 1
     path: Assets/Scenes/Level_4/4.1_Introduction.unity
     guid: 6f67a97766d29eb42a8efa5713964296
+  - enabled: 1
+    path: Assets/Scenes/Level_4/Questions.unity
+    guid: 50f3296aa9614884fa94c8cbff97787c
+  - enabled: 1
+    path: Assets/Scenes/Level_4/CodeScene 4.1.unity
+    guid: b6ed9369e874c034ca355218cd7ce2de
   - enabled: 1
     path: Assets/Scenes/Level_5/5.1_Introduction.unity
     guid: b4489cb0591595145a9f420ecb9e1ce8
   - enabled: 1
+    path: Assets/Scenes/Level_5/ExemploReferencia.unity
+    guid: 42c7e8cd0bb0bb04fa706e7cb124d72d
+  - enabled: 1
     path: Assets/Scenes/Level_6/6.1_Introduction.unity
     guid: 429db62341f333749b65063410513e6a
+  - enabled: 1
+    path: "Assets/Scenes/Level_6/SugestaoApresenta\xE7\xE3o.unity"
+    guid: 022426a2a95645d40be769c6145d045d
+  - enabled: 1
+    path: Assets/Scenes/Level_6/CodeScene 6.1.unity
+    guid: e9931934d4d4f1e419a222a36e2a9d17
   - enabled: 1
     path: Assets/Scenes/LastScene.unity
     guid: 5991e3f4e5603474ba101aef4387b167

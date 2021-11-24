@@ -13,16 +13,9 @@ MonoBehaviour:
   m_Name: 4.1_Introduction
   m_EditorClassIdentifier: 
   setences:
-  - setences: 'Agora, chegou a hora de definir o foco da sua pesquisa. '
+  - setences: Hora de definir o seu foco de pesquisa.
     names: Bibliotecaria
-  - setences: "Com base nos fichamentos, qual o assunto chamou mais a sua aten\xE7\xE3o?"
-    names: Bibliotecaria
-  - setences: FOCO???
+  - setences: Estou pronta para definir meu foco.
     names: "Maria Livr\xE3o"
-  - setences: "Essa etapa \xE9 a constru\xE7\xE3o dos problemas e objetivos. "
+  - setences: "Com base nos fichamentos realizados, o que mais lhe chamou a aten\xE7\xE3o? "
     names: Bibliotercaria
-  - setences: "\xC9 quando voc\xEA se pergunta: at\xE9 onde quero chegar na minha
-      pesquisa?"
-    names: Bibliotercaria
-  - setences: "Ah, entendi. Obrigada! Eu j\xE1 sei qual o assunto que mais gostei!"
-    names: "Maria Livr\xE3o"

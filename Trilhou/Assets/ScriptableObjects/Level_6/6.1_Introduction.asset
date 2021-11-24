@@ -13,15 +13,9 @@ MonoBehaviour:
   m_Name: 6.1_Introduction
   m_EditorClassIdentifier: 
   setences:
-  - setences: "Ainda estou com um pouco de d\xFAvidas em como \r\nusar essas fontes. "
-    names: Maria Livrao
-  - setences: "para produzir seu texto, \r\nvc precisa utilizar algumas fontes: livros,\r\nrevistas,
-      sites, internet, jornais e etc...\r\n"
-    names: "Bibliotec\xE1ria"
-  - setences: "Aqui tem um cart\xE3o com exemplo de fonte Maria.\r"
-    names: "Bibliotec\xE1ria"
-  - setences: "E nessa mesa tem varias fontes, tente fotografar a \r\nque esta correta
-      com essa do cart\xE3o.\r\n"
+  - setences: "Maria, chegou a hora de organizar as informa\xE7\xF5es coletadas e
+      se preparar para mostrar os resultados. "
     names: Bibliotecaria
-  - setences: Adoro fotografar coisas!
-    names: Maria Livrao
+  - setences: "Veja se as informa\xE7\xF5es que voc\xEA coletou est\xE3o de acordo
+      com o que o professor pediu."
+    names: "Bibliotec\xE1ria"
