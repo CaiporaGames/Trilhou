@@ -5797,6 +5797,7 @@ MonoBehaviour:
   angle: 40
   rotateTimer: 2
   delayToStart: 4
+  isLastLevel: 1
 --- !u!1001 &1527209878
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -6190,7 +6191,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3c68f3431e09c10498e2f896f09e3947, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueIndex: 2
+  dialogueIndex: 3
   startPosition: {fileID: 812732799}
   middlePosition: {fileID: 39010865}
   time: 3

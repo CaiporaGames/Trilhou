@@ -27,11 +27,19 @@ namespace Timoteo
         [SerializeField] float rotateTimer;
         [SerializeField] float delayToStart;
 
+        [SerializeField] bool isLastLevel = false;
+
         bool runOnce = true;
+        
 
         private void Update()
         {
-            if (DialogueManager.Instance.SentenceIndex == 8 && runOnce)
+            if (DialogueManager.Instance.SentenceIndex == 8 && runOnce && !isLastLevel)
+            {
+                runOnce = false;
+                StartBookMovement();
+            }
+            if (DialogueManager.Instance.SentenceIndex == 1 && runOnce && isLastLevel)
             {
                 runOnce = false;
                 StartBookMovement();

@@ -75,6 +75,9 @@ EditorBuildSettings:
     path: Assets/Scenes/Level_9/9.1_Introduction.unity
     guid: e0a6174fc92a5c7439e3e1978b5fe89b
   - enabled: 1
+    path: Assets/Scenes/Level_9/CodeScene 9.2.unity
+    guid: 12432710fe43167499596354ae0a78ef
+  - enabled: 1
     path: Assets/Scenes/LastScene.unity
     guid: 5991e3f4e5603474ba101aef4387b167
   m_configObjects: {}
