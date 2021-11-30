@@ -1584,16 +1584,16 @@ MonoBehaviour:
   m_text: "Hora de apresentar o resultado aos colegas e ao professor. O professor
     insere o c\xF3digo no campo abaixo."
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 9c631e316e3c4cb418db85c0fd6da274, type: 2}
-  m_sharedMaterial: {fileID: -1358875373512603180, guid: 9c631e316e3c4cb418db85c0fd6da274,
+  m_fontAsset: {fileID: 11400000, guid: 2abf75d6e0d8a4aa6910fae6ee5d638b, type: 2}
+  m_sharedMaterial: {fileID: 21352953850445826, guid: 2abf75d6e0d8a4aa6910fae6ee5d638b,
     type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
   m_fontColor32:
     serializedVersion: 2
-    rgba: 4279645890
-  m_fontColor: {r: 0.7607843, g: 0.21176471, b: 0.08627451, a: 1}
+    rgba: 4290915094
+  m_fontColor: {r: 0.08627452, g: 0.16681631, b: 0.7607843, a: 1}
   m_enableVertexGradient: 0
   m_colorMode: 3
   m_fontColorGradient:
@@ -1939,7 +1939,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Inserir c\xF3digo aqui..."
+  m_text: "Quinto c\xF3digo aqui..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9c631e316e3c4cb418db85c0fd6da274, type: 2}
   m_sharedMaterial: {fileID: -1358875373512603180, guid: 9c631e316e3c4cb418db85c0fd6da274,

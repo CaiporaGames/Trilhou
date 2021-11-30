@@ -20,8 +20,9 @@ MonoBehaviour:
 '
     names: Maria Livrao
   - setences: "Agora Maria, voc\xEA vai reunir todas as informa\xE7\xF5es que est\xE3o
-      relacionadas ao seu foco e coletar as informa\xE7\xF5es mais espec\xEDficas
-      sobre ele."
+      relacionadas ao seu foco"
+    names: Bibliotecaria
+  - setences: " e coletar as informa\xE7\xF5es mais espec\xEDficas sobre ele."
     names: Bibliotecaria
   - setences: "Lembrando sempre de anotar as refer\xEAncias dos materiais que voc\xEA
       utilizar. "

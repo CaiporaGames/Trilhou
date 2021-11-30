@@ -1939,7 +1939,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Inserir c\xF3digo aqui..."
+  m_text: "Quarto c\xF3digo aqui..."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 9c631e316e3c4cb418db85c0fd6da274, type: 2}
   m_sharedMaterial: {fileID: -1358875373512603180, guid: 9c631e316e3c4cb418db85c0fd6da274,

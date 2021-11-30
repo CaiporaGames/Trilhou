@@ -32,9 +32,8 @@ namespace Timoteo
             LeanTween.scale(uiElementPos.gameObject, scaleDirection, time).setEasePunch();
             objectsCount.objectsCount++;
 
-            if (objectsCount.objectsCount == 7)
+            if (objectsCount.objectsCount == 8)
             {
-                PointsBar.Instance.AddPointsToBar();
                 StartCoroutine(DelayToNextLevel());
             }
             Destroy(this, 4);

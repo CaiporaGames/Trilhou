@@ -5,10 +5,25 @@ using System.IO;
 
 public class ScreenShot : MonoBehaviour
 {
+    static ScreenShot _instance;
+    [SerializeField] SONameHolder studentName;
+    public static ScreenShot Instance { get { return _instance; } }
 
-    public void TakePhoto()
+    private void Awake()
+    {
+        if (_instance != this && _instance != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            _instance = this;
+        }
+    }
+    public string TakePhoto()
     {
         StartCoroutine(ScreensShot());
+        return Application.dataPath;
     }
    IEnumerator ScreensShot()
     {
@@ -19,9 +34,9 @@ public class ScreenShot : MonoBehaviour
         texture.Apply();
 
         byte[] bytes = texture.EncodeToPNG();
-        string name = "Certificado_Pesquisador_Nivel_1" + System.DateTime.Now.ToString() +".png";
-        File.WriteAllBytes(Application.dataPath + name, bytes);
-
+        string name = "Certificado_Pesquisador_Nivel_1_" + studentName.studentName+ "_" + Random.value +".png";
+        File.WriteAllBytes(Application.persistentDataPath + name, bytes);
+        Debug.Log(Application.persistentDataPath + name);
         Destroy(texture);       
     }
 }

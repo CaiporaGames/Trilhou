@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 580bd8d48fecce9488062830bd23085f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardsCount: {fileID: 11400000, guid: da0ac9c172bcddf4188088c3b176a559, type: 2}
 --- !u!4 &60130732
 Transform:
   m_ObjectHideFlags: 0
@@ -404,6 +405,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 580bd8d48fecce9488062830bd23085f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardsCount: {fileID: 11400000, guid: da0ac9c172bcddf4188088c3b176a559, type: 2}
 --- !u!4 &334859319
 Transform:
   m_ObjectHideFlags: 0
@@ -735,6 +737,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 580bd8d48fecce9488062830bd23085f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardsCount: {fileID: 11400000, guid: da0ac9c172bcddf4188088c3b176a559, type: 2}
 --- !u!4 &454458613
 Transform:
   m_ObjectHideFlags: 0
@@ -1975,6 +1978,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 580bd8d48fecce9488062830bd23085f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardsCount: {fileID: 11400000, guid: da0ac9c172bcddf4188088c3b176a559, type: 2}
 --- !u!4 &835462742
 Transform:
   m_ObjectHideFlags: 0
@@ -2131,6 +2135,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 580bd8d48fecce9488062830bd23085f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardsCount: {fileID: 11400000, guid: da0ac9c172bcddf4188088c3b176a559, type: 2}
 --- !u!4 &857375908
 Transform:
   m_ObjectHideFlags: 0
@@ -2540,6 +2545,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 580bd8d48fecce9488062830bd23085f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardsCount: {fileID: 11400000, guid: da0ac9c172bcddf4188088c3b176a559, type: 2}
 --- !u!4 &1090209863
 Transform:
   m_ObjectHideFlags: 0
@@ -2883,6 +2889,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 580bd8d48fecce9488062830bd23085f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cardsCount: {fileID: 11400000, guid: da0ac9c172bcddf4188088c3b176a559, type: 2}
 --- !u!82 &1227918170
 AudioSource:
   m_ObjectHideFlags: 0

@@ -1382,6 +1382,11 @@ PrefabInstance:
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 2013463294}
+    - target: {fileID: 2048479722328672473, guid: 103ea72f4fbea8f46acdde691c5fc3af,
+        type: 3}
+      propertyPath: setenceIndex
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2048479722328672474, guid: 103ea72f4fbea8f46acdde691c5fc3af,
         type: 3}
       propertyPath: m_RootOrder
@@ -1476,8 +1481,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1760982812}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.8, y: -0.8, z: 8}
-  m_LocalScale: {x: 0.63279, y: 0.63279, z: 0.63279}
+  m_LocalPosition: {x: -0.26, y: -1.73, z: 8}
+  m_LocalScale: {x: 0.7466533, y: 0.7466533, z: 0.7466533}
   m_Children: []
   m_Father: {fileID: 116430104}
   m_RootOrder: 9
@@ -2092,18 +2097,18 @@ PrefabInstance:
     - target: {fileID: 4622609942710162297, guid: 4939ba772999ae54cb84521df8a5555a,
         type: 3}
       propertyPath: Positions.Array.size
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4622609942710162297, guid: 4939ba772999ae54cb84521df8a5555a,
         type: 3}
       propertyPath: Positions.Array.data[0].A
       value: 
-      objectReference: {fileID: 966355106}
+      objectReference: {fileID: 1867618963}
     - target: {fileID: 4622609942710162297, guid: 4939ba772999ae54cb84521df8a5555a,
         type: 3}
       propertyPath: Positions.Array.data[0].B
       value: 
-      objectReference: {fileID: 1867618963}
+      objectReference: {fileID: 966355106}
     - target: {fileID: 4622609942710162297, guid: 4939ba772999ae54cb84521df8a5555a,
         type: 3}
       propertyPath: Positions.Array.data[1].A
@@ -2127,7 +2132,7 @@ PrefabInstance:
     - target: {fileID: 4622609942710162297, guid: 4939ba772999ae54cb84521df8a5555a,
         type: 3}
       propertyPath: Positions.Array.data[0].time
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 4622609942710162297, guid: 4939ba772999ae54cb84521df8a5555a,
         type: 3}
@@ -2141,8 +2146,13 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4622609942710162297, guid: 4939ba772999ae54cb84521df8a5555a,
         type: 3}
+      propertyPath: Positions.Array.data[0].index
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4622609942710162297, guid: 4939ba772999ae54cb84521df8a5555a,
+        type: 3}
       propertyPath: Positions.Array.data[1].index
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4622609942710162297, guid: 4939ba772999ae54cb84521df8a5555a,
         type: 3}
@@ -2153,7 +2163,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Positions.Array.data[0].endPoint
       value: 
-      objectReference: {fileID: 1285766593}
+      objectReference: {fileID: 2141421953}
     - target: {fileID: 4622609942710162297, guid: 4939ba772999ae54cb84521df8a5555a,
         type: 3}
       propertyPath: Positions.Array.data[1].endPoint
@@ -2168,7 +2178,7 @@ PrefabInstance:
         type: 3}
       propertyPath: Positions.Array.data[0].startPoint
       value: 
-      objectReference: {fileID: 492008170}
+      objectReference: {fileID: 792356414}
     - target: {fileID: 4622609942710162297, guid: 4939ba772999ae54cb84521df8a5555a,
         type: 3}
       propertyPath: Positions.Array.data[1].startPoint
