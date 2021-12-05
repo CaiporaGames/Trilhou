@@ -639,6 +639,46 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 8213420055608196895, guid: 3b30fde2023d6e7419b17582e674c33b,
+        type: 3}
+      propertyPath: m_Colors.m_NormalColor.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213420055608196895, guid: 3b30fde2023d6e7419b17582e674c33b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213420055608196895, guid: 3b30fde2023d6e7419b17582e674c33b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213420055608196895, guid: 3b30fde2023d6e7419b17582e674c33b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1578199177}
+    - target: {fileID: 8213420055608196895, guid: 3b30fde2023d6e7419b17582e674c33b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213420055608196895, guid: 3b30fde2023d6e7419b17582e674c33b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: CanPlayAudio
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213420055608196895, guid: 3b30fde2023d6e7419b17582e674c33b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Timoteo.DialogueManager, Assembly-CSharp
+      objectReference: {fileID: 0}
+    - target: {fileID: 8213420055608196895, guid: 3b30fde2023d6e7419b17582e674c33b,
+        type: 3}
+      propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 8889693519388035306, guid: 3b30fde2023d6e7419b17582e674c33b,
         type: 3}
       propertyPath: m_Enabled
@@ -1450,7 +1490,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: f8641e395c2f7f8488a184c5d2ef1529, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.28
+  m_Volume: 0.15
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2600,7 +2640,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 5
-  m_Sprite: {fileID: 21300000, guid: 52d002db7e0771d429f5f55d28d6fde5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: ccce5357b57b6de4584c8213084ec90f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3076,9 +3116,35 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 2048479722328672473, guid: 103ea72f4fbea8f46acdde691c5fc3af,
         type: 3}
+      propertyPath: canPlayAudio
+      value: 
+      objectReference: {fileID: 11400000, guid: 3da610a8da5d0504ca862d73bd61b2bf,
+        type: 2}
+    - target: {fileID: 2048479722328672473, guid: 103ea72f4fbea8f46acdde691c5fc3af,
+        type: 3}
       propertyPath: dialogueText
       value: 
       objectReference: {fileID: 504281972}
+    - target: {fileID: 2048479722328672473, guid: 103ea72f4fbea8f46acdde691c5fc3af,
+        type: 3}
+      propertyPath: audios.Array.size
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2048479722328672473, guid: 103ea72f4fbea8f46acdde691c5fc3af,
+        type: 3}
+      propertyPath: audios.Array.data[0]
+      value: 
+      objectReference: {fileID: 8300000, guid: dae4e9dddd2766149bdeb4281a3674fb, type: 3}
+    - target: {fileID: 2048479722328672473, guid: 103ea72f4fbea8f46acdde691c5fc3af,
+        type: 3}
+      propertyPath: audios.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 08300f947257ed546851d6de98686b02, type: 3}
+    - target: {fileID: 2048479722328672473, guid: 103ea72f4fbea8f46acdde691c5fc3af,
+        type: 3}
+      propertyPath: audios.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: 1cfdece5d0582d840a6e533b6d3f2836, type: 3}
     - target: {fileID: 2048479722328672474, guid: 103ea72f4fbea8f46acdde691c5fc3af,
         type: 3}
       propertyPath: m_RootOrder

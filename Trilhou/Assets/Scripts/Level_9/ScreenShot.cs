@@ -23,7 +23,7 @@ public class ScreenShot : MonoBehaviour
     public string TakePhoto()
     {
         StartCoroutine(ScreensShot());
-        return Application.dataPath;
+        return Application.persistentDataPath;
     }
    IEnumerator ScreensShot()
     {

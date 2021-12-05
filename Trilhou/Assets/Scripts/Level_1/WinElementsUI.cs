@@ -32,7 +32,7 @@ namespace Timoteo
             LeanTween.scale(uiElementPos.gameObject, scaleDirection, time).setEasePunch();
             objectsCount.objectsCount++;
 
-            if (objectsCount.objectsCount == 8)
+            if (objectsCount.objectsCount == 7)
             {
                 StartCoroutine(DelayToNextLevel());
             }

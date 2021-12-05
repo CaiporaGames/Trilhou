@@ -11,6 +11,8 @@ namespace Timoteo
     {
         [SerializeField] SODialogue dialogues;//This is a scriptable object holding the dialogue
         [SerializeField] TMP_Text dialogueText;//this holds the text component 
+        [SerializeField] AudioClip[] audios;
+        [SerializeField] SOBoolean canPlayAudio;
 
         [Tooltip("This holds the current sentence index on the sentences string list")]
         public byte setenceIndex;
@@ -25,8 +27,12 @@ namespace Timoteo
         public delegate void lastDialogueIndexDelegate();
         public static lastDialogueIndexDelegate lastDialogueIndex;
 
+
+
+        AudioSource audioSource;
         private void Awake()
         {
+            audioSource = GetComponent<AudioSource>();
             if (_instance != null && _instance != this)
             {
                 Destroy(gameObject);
@@ -44,16 +50,23 @@ namespace Timoteo
         void DisplayDialogue(int setenceIndex)//this passes the dialogue from the scriptable object dialogues to the text
         {
             dialogueText.text = dialogues.setences[setenceIndex].setences;
+            if (audios.Length > 0 && canPlayAudio.boolean)
+            {
+                audioSource.clip = audios[setenceIndex];
+                audioSource.Play();
+            }
 
         }
 
+      
         public void NextDialogue()//this controls the next dialogue when the player press the next button
         {
             LastDialogueIndex();
 
             if (setenceIndex < dialogues.setences.Length - 1)
             {
-                setenceIndex++;
+                
+                setenceIndex++;              
                 NextDialogueDelegate?.Invoke();
                 DisplayDialogue(setenceIndex);
             }
@@ -63,16 +76,30 @@ namespace Timoteo
         {
             if (setenceIndex > 0)
             {
-                setenceIndex--;
+                setenceIndex--;               
                 DisplayDialogue(setenceIndex);
             }
         }
 
         void LastDialogueIndex()
-        {
+        {         
+           
             if (setenceIndex == dialogues.setences.Length-1)
             {
                 lastDialogueIndex?.Invoke();
+            }
+        }
+
+        public void CanPlayAudio()
+        {
+            canPlayAudio.boolean = !canPlayAudio.boolean;
+            if (canPlayAudio.boolean)
+            {
+                audioSource.Play();
+            }
+            else
+            {
+                audioSource.Stop();
             }
         }
 

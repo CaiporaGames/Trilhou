@@ -14,14 +14,7 @@ public class PutNameOnField : MonoBehaviour
     private void Start()
     {
         text.text = playerName.studentName;
-        path.text = ScreenShot.Instance.TakePhoto();
+      //  path.text = ScreenShot.Instance.TakePhoto();
 
-        StartCoroutine(Panel());
-    }
-
-    IEnumerator Panel()
-    {
-        yield return new WaitForSeconds(1);
-        photoInfoPanel.SetActive(true);
-    }
+    }  
 }
