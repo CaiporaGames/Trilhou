@@ -280,27 +280,30 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "<align=center><size=80><b><i>Para o Professor</b></i></size></align>\n\n   
-    Este \xE9 um trabalho de finaliza\xE7\xE3o de metrado que originou-se de um projeto
-    escolar com papel\xE3o para ensinar crian\xE7as a importancia da pesquisa. \n\n   
-    O projeto foi idealizado pela Bibliotecaria e Mestranda France sob a orienta\xE7\xE3o
-    da Professora Doutrora Jana\xEDna.\n\n    Este projeto tem como objetivo de ensinar
-    crian\xE7as, de maneira l\xFAdica, como fazer uma pesquisa. O projeto foi projetado
-    de tal maneira que \xE9 necess\xE1rio a presen\xE7a de um professor para coordenar
-    todo o processo.\n\n    O jogo \xE9 dividido em duas din\xE2micas: Na primeira
-    din\xE2minca, a crian\xE7a vai jogando pra entender o processo de pesquisa. \nNa
-    segunda din\xE2mica, o professor orienta e ensina os conceitos apresentados no
-    jogo.\n\n    A segunda etapa ser\xE1 sinalizada quando o aluno chega na tela
-    de c\xF3digo, nesta cont\xE9m orienta\xE7\xF5es tanto para a crian\xE7a quanto
-    para o professor.\n\n    O professor somente deve desbloquear a pr\xF3xima etapa
-    quando a crian\xE7a apresentar os resultados corretos.\n\n    Os codigos para
-    cada tela s\xE3o: <color=blue>trilhou 01, trilhou 02, trilhou 03, trihlou 04,
-    trilhou 05</color>.\nObserve na zona onde insere-se o c\xF3digo tem o n\xFAmero
-    correspondente para o c\xF3digo. Exemplo: <color=red>Terceiro c\xF3digo aqui</color>,
-    neste campo deve ser inserido o c\xF3digo: <color=red>trilhou 03</color>.\n\nObrigado
-    por jogar <size=40><b>Trilhou</b></size>!\n\n<b>Equipe t\xE9cnica:</b>\n\nSupervisora
-    T\xE9cnica: Professora Doutora Kenia Kodel.\nProgramador Chefe e Artista Gr\xE1fico:
-    Tim\xF3teo Alves Cruz.\nProgramadores Auxiliares: Fernando e Paulo."
+  m_text: "<align=center><size=50><b><i>Orienta\xE7\xF5es para professores, bibliotec\xE1rios
+    e mediadores.</b></i></size></align>\n\n Essa \xE9 uma proposta idealizada, a
+    partir da disserta\xE7\xE3o de Mestrado da acad\xEAmica France Mabel Fernandes
+    Costa Santos, com a orienta\xE7\xE3o da prof.\xAA Dra. Janaina Fialho, do Programa
+    de P\xF3s-Gradua\xE7\xE3o em Ci\xEAncia da Informa\xE7\xE3o da Universidade Federal
+    de Sergipe. \r\n\nA personagem principal do jogo \xE9 Maria Livr\xE3o, criada
+    para dinamizar a biblioteca escolar em projetos desenvolvidos pela Bibliotec\xE1ria
+    France Mabel F. C. Santos. \r\n\nO jogo eletr\xF4nico <b><color=blue>TRILHOU</color></b>
+    \xE9 uma maneira din\xE2mica e divertida para auxiliar a crian\xE7a a identificar
+    as etapas de uma pesquisa escolar.\n O processo de aprendizagem acontece em todo
+    decorrer do jogo e deve ser realizado com a ajuda do mediador (PROFESSOR, BIBLIOTEC\xC1RIO,
+    PAIS).\n \r\nO jogo \xE9 dividido em duas etapas:\r\n<color=blue>ETAPA 1</color>
+    - A crian\xE7a vai jogando e acompanhando o trajeto de Maria Livr\xE3o para entender
+    o processo de pesquisa escolar.\r\n<color=blue>ETAPA 2</color> \u2013 Conforme
+    a crian\xE7a avan\xE7a e entrega os resultados, o mediador vai liberando os c\xF3digos
+    na tela. \r\n\n<color=blue>PARA O MEDIADOR</color>: Os c\xF3digos para cada tela
+    s\xE3o: <color=red>trilhou 01, trilhou 02, trilhou 03, trilhou 04, trilhou 05</color>.\r\n\nNo
+    final do jogo a crian\xE7a pode ver o seu certificado de pesquisador n\xEDvel
+    1. Para a crian\xE7a poder ter uma c\xF3pia do certificado, ela deve apertar
+    o bot\xE3o printscreen e depois usar o programa Paint do windows para poder salvar
+    a imagem no PC. Uma vez salvo o arquivo pode ser impresso!\r\n\r\n<color=blue>Equipe
+    t\xE9cnica</color>:\r\nSupervisora T\xE9cnica: Professora Doutora Kenia Kodel
+    (UFS)\r\nProgramador Chefe e Artista Gr\xE1fico: Tim\xF3teo Alves Cruz (UFS)\r\nProgramadores
+    Auxiliares: Lu\xEDs Fernando Feitosa e Paulo M. Dourado Fernandes (UFS)\r\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ea4179ba609564f33b822e1be581b321, type: 2}
   m_sharedMaterial: {fileID: 21605244428125924, guid: ea4179ba609564f33b822e1be581b321,
