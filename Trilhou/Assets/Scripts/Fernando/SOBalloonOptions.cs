@@ -17,7 +17,7 @@ public class SOBalloonOptions : ScriptableObject
     public void AddWordsToBallonOptions()
     {
         ballonOptions.Clear();
-        ballonOptions.Insert(0, "O assunto é interessante? ");
+        ballonOptions.Insert(0, "Sim, o assunto é interessante.");
         ballonOptions.Insert(1, "O assunto atende a tarefa solicitada pelo professor?");
         ballonOptions.Insert(2, "Existem informações suficientes sobre esse assunto na biblioteca e na internet? ");
         ballonOptions.Insert(3, "Posso organizar as informações para apresentar no prazo que o professor pediu?");     

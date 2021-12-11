@@ -21,8 +21,8 @@ MonoBehaviour:
     names: Bibliotecaria
   - setences: Para fazer uma pesquisa precisamos definir onde vamos pesquisar.
     names: Bibliotecaria
-  - setences: "Por exemplo:<color=red> livros, pessoas, internet, jornal, revistas,
-      cat\xE1logo de biblioteca.  </color>"
+  - setences: "Por exemplo:<color=red> Livros, pessoas, internet, jornal, revistas,
+      cat\xE1logos de bibliotecas.  </color>"
     names: Bibliotecaria
   - setences: "S\xE3o alguns recursos informacionais que podemos usar."
     names: Bibliotecaria

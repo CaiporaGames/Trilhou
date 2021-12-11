@@ -47,6 +47,7 @@ MonoBehaviour:
   dialogues: {fileID: 11400000, guid: 047d222e91a37f649a519e433ce5ae24, type: 2}
   dialogueText: {fileID: 0}
   audios: []
+  canPlayAudio: {fileID: 11400000, guid: 3da610a8da5d0504ca862d73bd61b2bf, type: 2}
   setenceIndex: 0
 --- !u!82 &3103766412973904015
 AudioSource:
