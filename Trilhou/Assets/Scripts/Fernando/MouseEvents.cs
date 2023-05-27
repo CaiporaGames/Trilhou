@@ -1,21 +1,23 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
-public class MouseEvents : MonoBehaviour
+namespace Fernando
 {
-    private void OnMouseEnter()
+    public class MouseEvents : MonoBehaviour
     {
-        Debug.Log("Entrou!");
-    }
+        private void OnMouseEnter()
+        {
+            Debug.Log("Entrou!");
+        }
 
-    private void OnMouseExit()
-    {
-        Debug.Log("Saiu!");
-    }
+        private void OnMouseExit()
+        {
+            Debug.Log("Saiu!");
+        }
 
-    private void OnMouseDown()
-    {
-        Debug.Log("Clicou!");
+        private void OnMouseDown()
+        {
+            Debug.Log("Clicou!");
+        }
     }
 }

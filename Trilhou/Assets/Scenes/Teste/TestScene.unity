@@ -123,6 +123,7 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+<<<<<<< HEAD
 --- !u!1 &49575713
 GameObject:
   m_ObjectHideFlags: 0
@@ -244,6 +245,8 @@ RectTransform:
   m_AnchoredPosition: {x: -225, y: -102}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0.5}
+=======
+>>>>>>> parent of e16a5a9 (excluir assets)
 --- !u!1 &584875884
 GameObject:
   m_ObjectHideFlags: 0
@@ -327,6 +330,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &990428897
 GameObject:
   m_ObjectHideFlags: 0
@@ -446,6 +450,8 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 990428897}
   m_CullTransparentMesh: 1
+=======
+>>>>>>> parent of e16a5a9 (excluir assets)
 --- !u!1 &1505499742
 GameObject:
   m_ObjectHideFlags: 0
@@ -512,6 +518,7 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+<<<<<<< HEAD
 --- !u!1 &1678434641
 GameObject:
   m_ObjectHideFlags: 0
@@ -613,3 +620,5 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+=======
+>>>>>>> parent of e16a5a9 (excluir assets)

@@ -301,7 +301,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7457749314709714991}
   - component: {fileID: 7457749314709714990}
+<<<<<<< HEAD
   - component: {fileID: 3832075503764007035}
+=======
+>>>>>>> parent of e16a5a9 (excluir assets)
   m_Layer: 0
   m_Name: Estante (2)
   m_TagString: Untagged
@@ -375,6 +378,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
 --- !u!114 &3832075503764007035
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -390,6 +394,8 @@ MonoBehaviour:
   sortingOrder: 5000
   offset: 0
   runOnlyOnce: 0
+=======
+>>>>>>> parent of e16a5a9 (excluir assets)
 --- !u!1 &7457749315284998706
 GameObject:
   m_ObjectHideFlags: 0
@@ -400,7 +406,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7457749315284998705}
   - component: {fileID: 7457749315284998704}
+<<<<<<< HEAD
   - component: {fileID: 1510915104811475523}
+=======
+>>>>>>> parent of e16a5a9 (excluir assets)
   m_Layer: 0
   m_Name: Estante (3)
   m_TagString: Untagged
@@ -474,6 +483,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
 --- !u!114 &1510915104811475523
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -489,6 +499,8 @@ MonoBehaviour:
   sortingOrder: 5000
   offset: 0
   runOnlyOnce: 0
+=======
+>>>>>>> parent of e16a5a9 (excluir assets)
 --- !u!1 &7457749315333709545
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,7 +511,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7457749315333709544}
   - component: {fileID: 7457749315333709551}
+<<<<<<< HEAD
   - component: {fileID: 5335103430000566119}
+=======
+>>>>>>> parent of e16a5a9 (excluir assets)
   m_Layer: 0
   m_Name: Estante
   m_TagString: Untagged
@@ -573,6 +588,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
 --- !u!114 &5335103430000566119
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -588,6 +604,8 @@ MonoBehaviour:
   sortingOrder: 5000
   offset: 0
   runOnlyOnce: 0
+=======
+>>>>>>> parent of e16a5a9 (excluir assets)
 --- !u!1 &7457749315374251047
 GameObject:
   m_ObjectHideFlags: 0
@@ -598,7 +616,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7457749315374251046}
   - component: {fileID: 7457749315374251045}
+<<<<<<< HEAD
   - component: {fileID: 3879409554999273884}
+=======
+>>>>>>> parent of e16a5a9 (excluir assets)
   m_Layer: 0
   m_Name: Estante (1)
   m_TagString: Untagged
@@ -672,6 +693,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
 --- !u!114 &3879409554999273884
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -687,6 +709,8 @@ MonoBehaviour:
   sortingOrder: 5000
   offset: 0
   runOnlyOnce: 0
+=======
+>>>>>>> parent of e16a5a9 (excluir assets)
 --- !u!1 &7457749315778948994
 GameObject:
   m_ObjectHideFlags: 0
@@ -697,7 +721,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7457749315778948993}
   - component: {fileID: 7457749315778948992}
+<<<<<<< HEAD
   - component: {fileID: 69176902158365473}
+=======
+>>>>>>> parent of e16a5a9 (excluir assets)
   m_Layer: 0
   m_Name: Estante (5)
   m_TagString: Untagged
@@ -771,6 +798,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
 --- !u!114 &69176902158365473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -786,6 +814,8 @@ MonoBehaviour:
   sortingOrder: 5000
   offset: 0
   runOnlyOnce: 0
+=======
+>>>>>>> parent of e16a5a9 (excluir assets)
 --- !u!1 &7457749315923347343
 GameObject:
   m_ObjectHideFlags: 0
@@ -796,7 +826,10 @@ GameObject:
   m_Component:
   - component: {fileID: 7457749315923347342}
   - component: {fileID: 7457749315923347341}
+<<<<<<< HEAD
   - component: {fileID: 2000954104899331483}
+=======
+>>>>>>> parent of e16a5a9 (excluir assets)
   m_Layer: 0
   m_Name: Estante (4)
   m_TagString: Untagged
@@ -870,6 +903,7 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+<<<<<<< HEAD
 --- !u!114 &2000954104899331483
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -885,3 +919,5 @@ MonoBehaviour:
   sortingOrder: 5000
   offset: 0
   runOnlyOnce: 0
+=======
+>>>>>>> parent of e16a5a9 (excluir assets)

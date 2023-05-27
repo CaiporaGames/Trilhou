@@ -52,7 +52,7 @@ namespace Timoteo
             }
         }
 
-        public void AddPointsToBar()//this will add a point on the points bar.
+        public void AddToPointsBar()//this will add a point on the points bar.
         {
             Image image = images[imageIndex].GetComponent<Image>();
             Color imageColor = image.color;

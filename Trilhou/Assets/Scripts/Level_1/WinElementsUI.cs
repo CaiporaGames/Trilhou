@@ -33,7 +33,7 @@ namespace Timoteo
 
             if (objectsCount.objectsCount == 7)
             {
-                PointsBar.Instance.AddPointsToBar();
+                PointsBar.Instance.AddToPointsBar();
                 StartCoroutine(DelayToNextLevel());
             }
             Destroy(this, 4);
